@@ -1,0 +1,181 @@
+/*
+*Header...............main layout, color, logo size, navbar
+*
+*Header - Navbar..... main layout typography and color, typography,
+*                              and hover effect
+*Mobile version......sandvich menu, padding adjustement 
+*                    of the header
+*/
+
+/*Sticky header*/
+
+header {
+  width:            100vw;
+  display:          flex;
+  flex-flow:        row nowrap;
+  justify-content:  space-between;  
+  align-items:      center;
+  background:       var(--brand-color) 0% 0% no-repeat padding-box;
+  opacity:          1;
+  padding-left:     10%;
+  padding-right:    10%;
+  position:         fixed;
+  z-index:          100;  
+}
+  
+
+  /* Logo sets the height of the header */
+
+  .logo--wrapper {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    height:          var(--logo-size);
+    width:           var(--logo-size);
+    margin-top:      var(--logo-margins);
+    margin-bottom:   var(--logo-margins);
+  }
+  
+  .logo {
+    height:           100%;
+    aspect-ratio:     1/1;
+    border-radius:    50%;
+  } 
+    
+    .logo:hover {
+      border:          1px solid rgba(var(--tertiary-color-rgb), 1);
+      box-shadow:      1px 1px 1px rgba(var(--tertiary-color-rgb), 1);
+      transition:      0.3s;
+      border-radius:   50%;
+    }
+    
+  
+  /* Navbar */
+
+  .nav--wrapper {
+    display: flex;
+  }
+
+  .nav {
+    width:           27.0625rem;
+    display:         flex;
+    flex-flow:       row nowrap;
+    justify-content: space-evenly;
+    align-items:     center;
+    gap:             1rem;
+    margin-left:     3rem;
+    
+  }
+  
+    .nav--item {
+      opacity:         .65;
+      position:        relative; /* to position the underline */
+      display:         inline-block; 
+    }
+  
+    /*in case of hover, underline is shown at the bottom of the navbar*/
+  
+      .nav--item:hover::after {
+        content:          "";
+        display:          block;
+        width:            100%;
+        height:           0.25rem;
+        background-color: var(--tertiary-color);
+        position:         absolute;
+        bottom:           -2.03rem;
+        left:             0;
+        
+      }
+    
+  
+      .nav--item:hover, .nav-menu:hover {
+        opacity:          1;
+        transition:       0.3s;
+      }
+
+    /*Active link is highlighted*/
+  
+      .nav--item__active {
+        opacity:          1;
+      }
+  
+
+  /*Sandvich menu is not shown on desktop */
+  
+  
+  .nav-menu {
+    display:         none;
+    color:           var(--tertiary-color);
+       
+  }
+
+/*--------------------------------*\
+  * MOBILE LAYOUT
+\*--------------------------------*/
+
+/*Sandvich menu*/
+/* 
+* 1) light yellow line separating the menu items 
+* 2) hover effect on mobile version not needed
+*/
+
+    @media (max-width: 991px) {
+    .nav--wrapper {
+      width: 100%;
+    }
+
+    .nav--wrapper > * {
+      width: 100%;
+    }
+      .nav {
+        max-height:       0;
+        display:          flex;
+        width:            100%;
+        gap:              0;
+        margin-left:      0; /*desktop version has 3rem margin-left*/
+        flex-flow:        column nowrap;
+        justify-content:  flex-start;
+        align-items:      center;
+        position:         relative;
+        top:              calc(var(--header-height) - var(--line-height-small));
+        background-color: var(--brand-color);
+        overflow:         hidden;
+        transition:       max-height 0.5s ease-out;
+      }
+    
+      .nav--wrapper.is-open .nav {
+        max-height: 100%;
+      }
+    
+        .nav--wrapper.is-open .nav > .nav--item { 
+          border-bottom: 1px solid rgba(var(--tertiary-color-rgb), 0.65); /*[1]*/
+          width:         100%;
+          text-align:    center;
+          z-index:       100;
+          padding-top:   1px;
+        }
+
+        .nav--wrapper.is-open .nav .nav--item__last { /*[1]*/
+          border-bottom: none;
+        }
+    
+            
+        .nav--wrapper.is-open .nav > .nav--item:hover::after { /* [2] */
+          display: none;
+        }
+         
+      
+    .nav-menu {
+      display:          block;
+      opacity:          .65;
+    }
+    
+    .nav-menu:hover { /*[2]*/
+      opacity:          .65;
+    }
+    
+      .nav-menu.highlight {
+        opacity:          1;
+      }
+    }
+    

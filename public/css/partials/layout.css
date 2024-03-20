@@ -1,0 +1,40 @@
+/*--------------------------------*\
+* LAYOUT 
+
+*Container............overall layout of the page
+*
+*Main.................over layout of the content
+*
+\*--------------------------------*/
+
+
+/*--------------------------------*\
+* OVERALL LAYOUT OF THE PAGE
+\*--------------------------------*/
+
+.container {
+    display:        flex;
+    flex-flow:      column nowrap;
+    min-height:     100vh;
+    width:          100vw;
+  }
+  
+  
+  
+  
+  
+  /*--------------------------------*\
+  * CONTENT LAYOUT
+  \*--------------------------------*/
+
+  main {
+    display:         flex;
+    flex-flow:       row wrap;      
+    justify-content: center;
+    align-items:     center;
+    flex-grow:       1;
+    gap:             1.875rem;
+    width:           100vw;
+    margin-top:      var(--header-height);
+  }
+

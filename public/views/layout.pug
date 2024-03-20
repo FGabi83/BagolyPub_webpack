@@ -1,0 +1,45 @@
+doctype html
+html(lang="hu")
+  head
+    title Bagoly Pub
+    script(src="https://kit.fontawesome.com/af9fa598da.js", crossorigin="anonymous")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet")
+    link(rel='stylesheet', href='css/style.css')
+    link(rel="icon", type="image/svg+xml", href="../images/icons/logo_light.svg")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    .container 
+      block header
+        header
+          a.logo--wrapper(href="/")
+            img.logo(src="../images/icons/logo_dark.svg" alt="logo")  
+          .nav--wrapper
+            div
+              nav.nav
+                block nav
+                  -const menu = [{ slug: '/', title: 'Kezdőlap', }, { slug: '/itallap', title: 'Itallap', }, { slug: '/kapcsolat', title: 'Kapcsolat', },]
+                  each item, index in menu
+                    a.nav--item.text--nav(href=item.slug, class=(index === menu.length - 1) ? 'nav--item__last' : '') #{item.title}
+          .nav-menu 
+            i.fa.fa-bars
+      block hero
+      block messages
+      if locals.flashes
+        .flash-messages
+          - const categories = Object.keys(locals.flashes)
+          each category in categories
+            each message in flashes[category]
+              .flash(class=`flash--${category}`)
+                p.flash__text!= message 
+                button.flash__remove(onClick="this.parentElement.remove()") &times;
+      block content
+        main
+        
+      footer
+        p.footer-text.text--small © 2024 Copyright <span class="highlighted-text"> Bagoly Pub </span> / Developed by <span class="highlighted-text"> Simple Works </span>
+
+
+    block scripts
+      script(src="App.bundle.js")

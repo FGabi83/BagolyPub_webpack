@@ -1,0 +1,1152 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+  /* Sections
+     ========================================================================== */
+  
+  /**
+   * Remove the margin in all browsers.
+   */
+  
+  body {
+    margin: 0;
+  }
+  
+  /**
+   * Render the `main` element consistently in IE.
+   */
+  
+  main {
+    display: block;
+  }
+  
+  /**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  /* Grouping content
+     ========================================================================== */
+  
+  /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+  
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /* Text-level semantics
+     ========================================================================== */
+  
+  /**
+   * Remove the gray background on active links in IE 10.
+   */
+  
+  a {
+    background-color: transparent;
+  }
+  
+  /**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+  
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  
+  /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+  
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /**
+   * Add the correct font size in all browsers.
+   */
+  
+  small {
+    font-size: 80%;
+  }
+  
+  /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+  
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  /* Embedded content
+     ========================================================================== */
+  
+  /**
+   * Remove the border on images inside links in IE 10.
+   */
+  
+  img {
+    border-style: none;
+  }
+  
+  /* Forms
+     ========================================================================== */
+  
+  /**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+  
+  /**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+  
+  button,
+  input { /* 1 */
+    overflow: visible;
+  }
+  
+  /**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+  
+  button,
+  select { /* 1 */
+    text-transform: none;
+  }
+  
+  /**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+  
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+  
+  /**
+   * Remove the inner border and padding in Firefox.
+   */
+  
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  /**
+   * Restore the focus styles unset by the previous rule.
+   */
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  /**
+   * Correct the padding in Firefox.
+   */
+  
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  
+  /**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+  
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  
+  /**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+  
+  progress {
+    vertical-align: baseline;
+  }
+  
+  /**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+  
+  textarea {
+    overflow: auto;
+  }
+  
+  /**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+  
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+  
+  /**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+  
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+  /**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+  
+  [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+  
+  /**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+  
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  
+  /**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+  
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+  
+  /* Interactive
+     ========================================================================== */
+  
+  /*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+  
+  details {
+    display: block;
+  }
+  
+  /*
+   * Add the correct display in all browsers.
+   */
+  
+  summary {
+    display: list-item;
+  }
+  
+  /* Misc
+     ========================================================================== */
+  
+  /**
+   * Add the correct display in IE 10+.
+   */
+  
+  template {
+    display: none;
+  }
+  
+  /**
+   * Add the correct display in IE 10.
+   */
+  
+  [hidden] {
+    display: none;
+  }
+/*-----------------------------------*\
+* BASIC SETTINGS OF THE PAGE
+\*-----------------------------------*/
+
+:root {
+    --primary-color:        #BC956C; /* brand - Light brown */
+    --primary-color-rgb:    188, 149, 108;
+    --secondary-color:      #FFFFFF; /* white */
+    --secondary-color-rgb:  255, 255, 255;
+    --brand-color:          #042236; /* brand - Dark blue */ 
+    --brand-color-rgb:      4, 34, 54;
+    --background-color:     #F4F3F5; /* light grey*/
+    --tertiary-color:       #FEEECA; /* light yellow */
+    --tertiary-color-rgb:   254, 238, 202;
+    --font-size-regular:    clamp(1rem, 2vh, 1.25rem);
+    --line-height-regular:  clamp(1.5rem, 3vh, 1.875rem);
+    --font-size-big:        calc(var(--font-size-regular) * 2);
+    --line-height-big:      calc(var(--line-height-regular) * 1.66);
+    --font-size-medium:     0.875rem;
+    --line-height-medium:   1.125rem;
+    --font-size-small:      0.75rem;
+    --line-height-small:    1rem;
+    --logo-size:            4.5rem;
+    --logo-margins:         0.25rem;
+    --header-height:        calc(var(--logo-size) + var(--logo-margins) * 2);
+    --hero-height:          calc(100vh - var(--header-height));  
+    --footer-height:        6.25rem; 
+    /*font-size:   clamp(1rem, 2vh, 1.125rem);
+  line-height: clamp(1.7rem, 3.5vh, 2.23rem);*/
+    
+} 
+
+/* normalize CSS */
+
+* {
+    margin:     0;
+    padding:    0;
+    box-sizing: border-box;
+}
+
+  
+
+  html {
+    background-color: var(--secondary-color);
+  }
+
+   
+
+  
+
+
+html {
+  font-size:        16px;
+  color:            var(--primary-color);
+}
+
+  
+  body {
+    width:       100vw;
+    font-family: "Jost", sans-serif;
+    font-weight: 400;
+    text-align:  left;
+    font-size:   var(--font-size-regular);
+    line-height: var(--line-height-regular);
+  }
+
+
+    a {
+      text-decoration: none;
+    }
+
+    .title {
+      font-family:   'Josefin Sans', sans-serif;
+      font-weight:    bold;
+      font-size:      var(--font-size-big);
+      line-height:    var(--line-height-big);
+      margin:         0;
+      margin-bottom:  .5rem;
+      color:          var(--brand-color);
+    }
+
+      .title__hero {
+        font-size:      calc(2 * var(--font-size-big)); 
+        line-height:    calc(2 * var(--line-height-big));
+        text-transform: uppercase;
+        color:          var(--secondary-color);
+        text-align:     center;
+        
+      }
+
+    .subtitle {
+      font-size:     calc(var(--font-size-regular) * 1.5);
+      line-height:   calc(var(--line-height-regular) * 1.5);
+      color:         var(--brand-color);
+      margin-top:    0.625rem;
+      margin-bottom: 0.625rem; 
+    }
+
+   
+      .text__hero {
+        font-size:   calc(1.5 * var(--font-size-regular)); 
+        line-height: calc(1.5 * var(--line-height-regular));
+        text-align:  center;
+        
+      }
+
+    .text--medium {
+      font-size:   var(--font-size-medium);
+      line-height: var(--line-height-medium);
+    }
+
+    .text--small {
+      font-size:   var(--font-size-small);
+      line-height: var(--line-height-small);
+    }
+
+    .text--nav {
+      font-family:    'Josefin Sans', sans-serif;
+      font-size:      var(--font-size-small);
+      line-height:    var(--line-height-small);
+      font-weight:    bold;
+      text-transform: uppercase;
+      letter-spacing: 0.15rem;
+      color:          var(--tertiary-color);
+    }
+
+    
+
+/*
+
+
+@media (max-width: 600px) {
+  .title {
+    font-size:   calc(var(--font-size-big) * .8);
+    line-height: calc(var(--line-height-big) * .8);
+  }
+    .title__extra {
+      font-size:   calc(1.5 * var(--font-size-big)); 
+      line-height: calc(1.5 * var(--line-height-big));
+    }
+  
+  .text--regular__responsive {
+    font-size:   calc(var(--font-size-regular__responsive) * .8);
+    line-height: calc(var(--line-height-regular__responsive) * .8);
+  }
+
+  .text__extra {
+    font-size:   var(--font-size-regular); 
+    line-height: var(--line-height-regular);
+    
+  }
+}
+
+@media (max-width: 470px) {
+  .title {
+    font-size: var(--font-size-regular);
+    line-height: var(--line-height-regular);
+  }
+  .text--regular__responsive {
+    font-size:   var(--font-size-medium);
+    line-height: var(--line-height-medium);
+  }  
+}
+
+*/
+/*--------------------------------*\
+* LAYOUT 
+
+*Container............overall layout of the page
+*
+*Main.................over layout of the content
+*
+\*--------------------------------*/
+
+
+/*--------------------------------*\
+* OVERALL LAYOUT OF THE PAGE
+\*--------------------------------*/
+
+.container {
+    display:        flex;
+    flex-flow:      column nowrap;
+    min-height:     100vh;
+    width:          100vw;
+  }
+  
+  
+  
+  
+  
+  /*--------------------------------*\
+  * CONTENT LAYOUT
+  \*--------------------------------*/
+
+  main {
+    display:         flex;
+    flex-flow:       row wrap;      
+    justify-content: center;
+    align-items:     center;
+    flex-grow:       1;
+    gap:             1.875rem;
+    width:           100vw;
+    margin-top:      var(--header-height);
+  }
+
+
+.btn {
+      
+    display:        inline-block;
+    width:          10rem;
+    height:         3.125rem;
+    border:         0.125rem solid;;
+    border-radius:  1.5rem;
+    opacity:        1;
+    padding:        1.09375rem;
+    font-size:      var(--font-size-small);
+    font-weight:    bold;
+    line-height:    var(--line-height-small);
+    text-align:     center;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+  }
+  
+  .btn:hover {
+    transition:       0.3s;
+  }
+  
+    .btn-primary {
+      background:   var(--brand-color) 0% 0% no-repeat padding-box;
+      border-color: var(--brand-color);
+      color:        var(--secondary-color);
+    }
+
+    .btn-primary:hover {
+      background:   var(--secondary-color);
+      border-color: var(--brand-color);
+      color:        var(--brand-color);
+    }
+
+    .btn-hollow {
+      background:   transparent;
+      border-color: var(--secondary-color);
+      color:        var(--secondary-color);
+    }
+
+    .btn-hollow:hover {
+      background:   var(--secondary-color);
+      border-color: var(--secondary-color);
+      color:        var(--brand-color);
+    }
+  
+    
+
+.highlighted-text {
+  /*letter-spacing:  0.15rem;*/
+  text-transform:  uppercase;
+  color:           var(--brand-color);
+  font-weight:     bold;
+  opacity:         1;
+}
+/*
+*Header...............main layout, color, logo size, navbar
+*
+*Header - Navbar..... main layout typography and color, typography,
+*                              and hover effect
+*Mobile version......sandvich menu, padding adjustement 
+*                    of the header
+*/
+
+/*Sticky header*/
+
+header {
+  width:            100vw;
+  display:          flex;
+  flex-flow:        row nowrap;
+  justify-content:  space-between;  
+  align-items:      center;
+  background:       var(--brand-color) 0% 0% no-repeat padding-box;
+  opacity:          1;
+  padding-left:     10%;
+  padding-right:    10%;
+  position:         fixed;
+  z-index:          100;  
+}
+  
+
+  /* Logo sets the height of the header */
+
+  .logo--wrapper {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    height:          var(--logo-size);
+    width:           var(--logo-size);
+    margin-top:      var(--logo-margins);
+    margin-bottom:   var(--logo-margins);
+  }
+  
+  .logo {
+    height:           100%;
+    aspect-ratio:     1/1;
+    border-radius:    50%;
+  } 
+    
+    .logo:hover {
+      border:          1px solid rgba(var(--tertiary-color-rgb), 1);
+      box-shadow:      1px 1px 1px rgba(var(--tertiary-color-rgb), 1);
+      transition:      0.3s;
+      border-radius:   50%;
+    }
+    
+  
+  /* Navbar */
+
+  .nav--wrapper {
+    display: flex;
+  }
+
+  .nav {
+    width:           27.0625rem;
+    display:         flex;
+    flex-flow:       row nowrap;
+    justify-content: space-evenly;
+    align-items:     center;
+    gap:             1rem;
+    margin-left:     3rem;
+    
+  }
+  
+    .nav--item {
+      opacity:         .65;
+      position:        relative; /* to position the underline */
+      display:         inline-block; 
+    }
+  
+    /*in case of hover, underline is shown at the bottom of the navbar*/
+  
+      .nav--item:hover::after {
+        content:          "";
+        display:          block;
+        width:            100%;
+        height:           0.25rem;
+        background-color: var(--tertiary-color);
+        position:         absolute;
+        bottom:           -2.03rem;
+        left:             0;
+        
+      }
+    
+  
+      .nav--item:hover, .nav-menu:hover {
+        opacity:          1;
+        transition:       0.3s;
+      }
+
+    /*Active link is highlighted*/
+  
+      .nav--item__active {
+        opacity:          1;
+      }
+  
+
+  /*Sandvich menu is not shown on desktop */
+  
+  
+  .nav-menu {
+    display:         none;
+    color:           var(--tertiary-color);
+       
+  }
+
+/*--------------------------------*\
+  * MOBILE LAYOUT
+\*--------------------------------*/
+
+/*Sandvich menu*/
+/* 
+* 1) light yellow line separating the menu items 
+* 2) hover effect on mobile version not needed
+*/
+
+    @media (max-width: 991px) {
+    .nav--wrapper {
+      width: 100%;
+    }
+
+    .nav--wrapper > * {
+      width: 100%;
+    }
+      .nav {
+        max-height:       0;
+        display:          flex;
+        width:            100%;
+        gap:              0;
+        margin-left:      0; /*desktop version has 3rem margin-left*/
+        flex-flow:        column nowrap;
+        justify-content:  flex-start;
+        align-items:      center;
+        position:         relative;
+        top:              calc(var(--header-height) - var(--line-height-small));
+        background-color: var(--brand-color);
+        overflow:         hidden;
+        transition:       max-height 0.5s ease-out;
+      }
+    
+      .nav--wrapper.is-open .nav {
+        max-height: 100%;
+      }
+    
+        .nav--wrapper.is-open .nav > .nav--item { 
+          border-bottom: 1px solid rgba(var(--tertiary-color-rgb), 0.65); /*[1]*/
+          width:         100%;
+          text-align:    center;
+          z-index:       100;
+          padding-top:   1px;
+        }
+
+        .nav--wrapper.is-open .nav .nav--item__last { /*[1]*/
+          border-bottom: none;
+        }
+    
+            
+        .nav--wrapper.is-open .nav > .nav--item:hover::after { /* [2] */
+          display: none;
+        }
+         
+      
+    .nav-menu {
+      display:          block;
+      opacity:          .65;
+    }
+    
+    .nav-menu:hover { /*[2]*/
+      opacity:          .65;
+    }
+    
+      .nav-menu.highlight {
+        opacity:          1;
+      }
+    }
+    
+
+.content-card {
+    width:           100vw;
+    min-height:      calc(100vh - var(--header-height) - var(--footer-height));
+    background:      var(--secondary-color) 0% 0% no-repeat padding-box;
+    display:         grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:    repeat(2, 1fr);
+    grid-template-areas: 
+      "map contact-wrapper"
+       "map open-wrapper";
+    padding:        5rem;
+    gap:            2rem;
+  }
+
+  .map {grid-area: map;}
+  .contact-wrapper {grid-area: contact-wrapper;}
+  .open-wrapper {grid-area: open-wrapper;}
+
+  .map {
+    width:           min(100%, 563px);
+    height:          80%;
+    border-radius:   2px;
+    object-fit:      cover;
+    border:          1px solid var(--background-color);
+    justify-self:      end;
+    
+  }
+
+  /*.inner-devider {
+    width:           min(40%, 580px);
+    aspect-ratio:    1/1;
+    display:         flex;
+    flex-flow:       column nowrap;
+    justify-content: flex-start;
+    gap:             2rem;
+    align-items:     flex-start;
+   }*/
+
+
+    .contact-wrapper, .open-wrapper {
+      display:         flex;
+      flex-flow:       column nowrap;
+      justify-content: flex-start;
+      gap:             .5rem;
+      
+    }
+
+    
+
+
+      /* Phone and email */
+
+        .phone, .email {
+          display:       block;
+          text-transform: none;
+          margin-bottom:  .25rem;
+
+        }
+
+        
+  
+        .phone:hover, .email:hover {
+          text-decoration: underline;
+        }
+
+  
+
+
+      /* Social media icons */
+
+      .icons-wrapper {
+        /*width:           50%;*/
+        height:          2rem;
+        display:         flex;
+        flex-flow:       row nowrap;
+        justify-content: flex-start;
+        gap:             .625rem;
+  
+      }
+  
+        .icons {
+          display:          flex;
+          flex-flow:        row nowrap;
+          justify-content:  center;
+          align-items:      center;
+          width:            2rem;
+          height:           2rem;
+          background-color: var(--brand-color);
+          color:            var(--secondary-color);
+          opacity:          .8;
+          border-radius:    50%;
+        }
+
+        .icons:hover {
+          background-color: transparent;
+          color:            var(--brand-color);
+          border:           .125rem solid var(--brand-color);
+        }  
+
+    
+
+
+
+@media (max-width: 923px) {
+  .content-card {
+    grid-template-areas: 
+      "contact-wrapper"  
+      "map"
+      "open-wrapper";
+    grid-template-columns: 1fr;
+    grid-template-rows:    auto;
+    justify-items:         center;
+    padding:               5rem 10% 5rem 10%;
+    gap:                   1.5rem;
+    /*overflow:              auto;*/
+  }
+
+  .contact-wrapper {
+    padding-top:  2rem;
+  }
+  
+  .map {
+    width:        clamp(286px, 80%, 358px);
+    aspect-ratio: 1/1;
+    place-self:   center;
+  }
+
+ 
+}
+.drinks--background {
+  background: url('../../images/photos/onebeer.jpg') no-repeat center / cover;
+  margin-top: var(--header-height);
+  height:     calc(100vh - var(--header-height) - var(--footer-height));
+  overflow:   auto;
+  
+  
+}
+
+
+  .drinks-wrapper {
+    width:           90%;
+    display:         flex;
+    flex-flow:       column nowrap;
+    justify-content: flex-start;
+    align-items:     center;
+    gap:             2rem;
+    padding:         5% 10% 5% 10%;
+  }
+
+/*
+* 1) Dark blue separator under the table header
+*/
+
+.table-container {
+  background-color:  rgba(var(--secondary-color-rgb), .9);
+  border-radius:     2px;
+  padding:           1rem;
+  width:             max(40%, 468px);
+}
+
+ 
+
+
+  .table {
+    color:           rgba(var(--brand-color-rgb), 1);
+    table-layout:    auto;
+    width:           100%;
+    height:          auto;
+    opacity:         1;
+    border-collapse: collapse; /* 1 */
+  }
+
+    .table-title {
+      width:          100%;
+      text-transform: uppercase;
+      font-weight:    bold;
+      margin-bottom:  1rem;
+    }
+     
+    .table thead {
+      color:         rgba(var(--brand-color-rgb), 1);
+      border-bottom: 1px solid rgba(var(--primary-color-rgb), 1); /* 1 */
+      width:         auto;
+      opacity:       1;
+    }
+
+    .table .table-items {
+      padding:         .3125rem;
+      width:           auto;
+      /*color:        rgba(188, 149, 108, 1);*/
+      }
+
+
+
+/*MOBILE VERSION*/
+
+@media (max-width: 900px) {
+  .drinks-wrapper {
+    width:   100vw;
+    padding: 1rem .5rem 1rem .5rem;
+    
+  }
+  .table-container {
+    width:   max(370px, 90%);
+    
+  } 
+}
+
+/* Hero picture */
+.hero {
+  width: 100vw;
+  height: 40vh;
+  object-fit: cover;
+}
+
+/* Hero background */
+
+.hero--main {
+  background:  url('../../images/photos/pub_interior.jpg') no-repeat center / cover; 
+  background-blend-mode: multiply;
+  background-color:   rgba(var(--brand-color-rgb), .3);
+  min-height:         var(--hero-height);
+  width:              100vw;
+  display:            flex;
+  flex-flow:          column nowrap;
+  justify-content:    center;
+  align-items:        center;
+  color:              var(--secondary-color);
+  padding:            1rem .5rem 1rem .5rem;
+  
+  
+}
+
+/* Hero text */
+
+  .text__hero {
+    width: 75%;
+    
+  }
+
+  @media (max-width: 891px) {
+    .text__hero {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 635px) {
+    .text__hero {
+      text-align: left;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .hero--main {
+      padding-left:  5%;
+      padding-right: 5%;
+    }
+    .title__hero {
+      font-size:   calc(1.5 * var(--font-size-big));
+      line-height: calc(1.5 * var(--line-height-big));
+    }
+    .text__hero {
+      font-size:   var(--font-size-regular);
+      line-height: var(--line-height-regular);
+      padding:     0;
+    }
+  }
+
+  
+.accordion {
+  display:         flex;
+  flex-flow:       column nowrap;
+  justify-content: flex-start;
+  align-items:     center; 
+  width:           90%;
+  gap:             1.5rem;  
+}
+
+  .accordion-content {
+    display:       none;
+    background:    rgba(var(--secondary-color-rgb), .9);
+    color:         var(--brand-color);
+    padding:       2rem;
+    border-radius: 2px;
+    width:         80%;
+   
+  }
+
+  .accordion-content.active {
+    display: block;
+  }
+
+  
+    .accordion-text {
+      margin-bottom: 1rem;
+    }
+
+
+    .accordion-list {
+      /*list-style-type: none;*/
+      margin-bottom:   1rem;
+      padding-left:    1.5rem;
+    }
+
+      /*.accordion-list li::before {
+        /*display: inline-block;*/
+       /* padding-left: 1rem;
+      }*/
+
+    
+
+  @media (max-width: 864px) {
+    .accordion-content {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 554px) {
+    .accordion {
+      width: 100%;
+    }
+    .accordion-content {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
+
+      
+
+      
+footer {
+    height:           var(--footer-height);
+    width:            100vw;
+    display:          flex;
+    flex-flow:        row nowrap;
+    justify-content:  center;  
+    align-items:      center;
+    background:       var(--primary-color) 0% 0% no-repeat padding-box;
+    opacity:          1;
+    
+  }
+  
+    .footer-text {
+      width:           69.375rem;
+      text-align:      center;
+      letter-spacing:  0.15rem;
+      text-transform:  uppercase;
+      color:           var(--background-color);
+    }
+  
+
+    
+
+
+
+
+
+/*# sourceMappingURL=style.css.map*/
