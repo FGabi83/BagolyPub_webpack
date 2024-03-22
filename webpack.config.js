@@ -71,7 +71,7 @@ const config = {
     App: "./public/javascripts/bagoly-app.js",
   },
   output: {
-    path: path.resolve(__dirname, "public", "dist"),
+    path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
   },
   module: {
@@ -97,7 +97,15 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       template: "./public/views/index.pug",
-      filename: "views/index.html",
+      filename: "index.html", 
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/views/drinks.pug",
+      filename: "itallap.html", 
+    }),
+    new HtmlWebpackPlugin({
+      template: "./public/views/contactPage.pug",
+      filename: "kapcsolat.html", 
     }),
   ],
 };
