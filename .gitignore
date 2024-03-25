@@ -1,11 +1,5 @@
 node_modules/
-data/
-public/
-app.js
-start.js 
-package.json
 package-lock.json
-webpack.config.js
 Bagoly wireframe.bmpr
 Bagoly wireframe.pdf
 
