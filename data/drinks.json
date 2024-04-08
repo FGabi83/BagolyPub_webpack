@@ -1,0 +1,86 @@
+[{
+  "name": "Best IPA",
+  "category": "brewed beer",
+  "smallPrice": 600,
+  "largePrice": 1100
+},
+{
+  "name": "Great APA",
+  "category": "brewed beer",
+  "smallPrice": 650,
+  "largePrice": 1200
+},
+{
+  "name": "Pilsner",
+  "category": "brewed beer",
+  "smallPrice": 500,
+  "largePrice": 1000
+},
+{
+  "name": "Amstel",
+  "category": "bottled beer",
+  "smallPrice": 500
+},
+{
+  "name": "Dreher",
+  "category": "bottled beer",
+  "smallPrice": 400
+},
+{
+  "name": "Soproni IPA",
+  "category": "bottled beer",
+  "smallPrice": 500
+},
+{
+  "name": "Tequila Silver",
+  "category": "shots",
+  "smallPrice": 400,
+  "largePrice": 800
+},
+{
+  "name": "Tequila Gold",
+  "category": "shots",
+  "smallPrice": 500,
+  "largePrice": 900
+},
+{
+  "name": "Jagermeister",
+  "category": "shots",
+  "smallPrice": 500,
+  "largePrice": 900
+},
+{
+  "name": "Coke",
+  "category": "soft drinks",
+  "smallPrice": 300
+},
+{
+  "name": "Fanta",
+  "category": "soft drinks",
+  "smallPrice": 300
+},
+{
+  "name": "Sprite",
+  "category": "soft drinks",
+  "smallPrice": 300
+},
+{
+  "name": "Mangalica tál",
+  "category": "food",
+  "smallPrice": 3000
+},
+{
+  "name": "Mártogatós",
+  "category": "food",
+  "smallPrice": 2000
+},
+{
+  "name": "Zsíroskenyér",
+  "category": "food",
+  "smallPrice": 600
+},
+{
+  "name": "Perec",
+  "category": "food",
+  "smallPrice": 550
+}]

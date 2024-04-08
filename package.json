@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec \"npm run build\" ",
+    "start": "nodemon --exec \"npm run build && node start.js\"",
     "build": "webpack --mode production",
     "watch": "webpack --mode development --watch",
     "dev": "nodemon start.js",

@@ -373,7 +373,7 @@
     --logo-margins:         0.25rem;
     --header-height:        calc(var(--logo-size) + var(--logo-margins) * 2);
     --hero-height:          calc(100vh - var(--header-height));  
-    --footer-height:        6.25rem; 
+    --footer-height:        9rem; 
     /*font-size:   clamp(1rem, 2vh, 1.125rem);
   line-height: clamp(1.7rem, 3.5vh, 2.23rem);*/
     
@@ -393,6 +393,7 @@
     background-color: var(--secondary-color);
   }
 
+  
    
 
   
@@ -730,11 +731,15 @@ header {
 
     @media (max-width: 991px) {
     .nav--wrapper {
-      width: 100%;
+      display: flex;
+      width:   100vw;
+      position: fixed;
+      top:     var(--header-height);
+      left:    0;
     }
 
     .nav--wrapper > * {
-      width: 100%;
+      width: 100vw;
     }
       .nav {
         max-height:       0;
@@ -745,8 +750,6 @@ header {
         flex-flow:        column nowrap;
         justify-content:  flex-start;
         align-items:      center;
-        position:         relative;
-        top:              calc(var(--header-height) - var(--line-height-small));
         background-color: var(--brand-color);
         overflow:         hidden;
         transition:       max-height 0.5s ease-out;
@@ -756,12 +759,16 @@ header {
         max-height: 100%;
       }
     
-        .nav--wrapper.is-open .nav > .nav--item { 
-          border-bottom: 1px solid rgba(var(--tertiary-color-rgb), 0.65); /*[1]*/
-          width:         100%;
-          text-align:    center;
-          z-index:       100;
-          padding-top:   1px;
+        .nav > * { 
+          border-bottom:   1px solid rgba(var(--tertiary-color-rgb), 0.65); /*[1]*/
+          padding-top:     1px;
+          width:           100%;
+          height:          2rem;
+          text-align:      center;
+          z-index:         100;
+          display:         flex;
+          justify-content: center;
+          align-items:     center;
         }
 
         .nav--wrapper.is-open .nav .nav--item__last { /*[1]*/
@@ -1095,6 +1102,17 @@ header {
       padding-left:    1.5rem;
     }
 
+      .accordion-link {
+        color: var(--primary-color);
+      }
+
+      .accordion-link:hover {
+        color: var(--brand-color);
+        text-decoration: underline;
+      }
+
+      
+
       /*.accordion-list li::before {
         /*display: inline-block;*/
        /* padding-left: 1rem;
@@ -1126,12 +1144,21 @@ footer {
     height:           var(--footer-height);
     width:            100vw;
     display:          flex;
-    flex-flow:        row nowrap;
+    flex-flow:        column nowrap;
     justify-content:  center;  
     align-items:      center;
+    gap:              var(--line-height-small);
     background:       var(--primary-color) 0% 0% no-repeat padding-box;
     opacity:          1;
     
+  }
+
+  .links-wrapper {
+    display:         flex;
+    flex-flow:       column nowrap;
+    justify-content: center;
+    align-items:     center;
+    gap:             0;
   }
   
     .footer-text {
@@ -1139,11 +1166,61 @@ footer {
       text-align:      center;
       letter-spacing:  0.15rem;
       text-transform:  uppercase;
-      color:           var(--background-color);
+      color:           var(--tertiary-color);
+    }
+
+    .footer-text__link {
+      color:           var(--brand-color);
     }
   
 
     
+/* Social media icons */
+
+.icons-wrapper {
+    /*width:           50%;*/
+    height:          2rem;
+    display:         flex;
+    flex-flow:       row nowrap;
+    justify-content: flex-start;
+    gap:             .625rem;
+
+  }
+
+    .icons {
+      display:          flex;
+      flex-flow:        row nowrap;
+      justify-content:  center;
+      align-items:      center;
+      width:            2rem;
+      height:           2rem;
+      background-color: var(--brand-color);
+      color:            var(--secondary-color);
+      opacity:          .8;
+      border-radius:    50%;
+    }
+
+    .icons:hover {
+      background-color: transparent;
+      color:            var(--brand-color);
+      border:           .125rem solid var(--brand-color);
+    }  
+
+
+    .icons__light {
+      background-color: var(--tertiary-color);
+      color:            var(--primary-color);
+    }
+
+    .icons__light:hover {
+        background-color: transparent;
+        color:            var(--tertiary-color);
+        border:           .125rem solid var(--tertiary-color);
+      }  
+
+.hide {
+  display: none;
+}
 
 
 

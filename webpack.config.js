@@ -61,7 +61,14 @@ const icons = {
 
 const pug = {
   test: /\.pug$/,
-  use: ["pug-loader"],
+  use: [
+    {
+      loader: "pug-loader",
+      options: {
+        pretty: true,
+      },
+    },
+  ],
 };
 
 const config = {
@@ -101,7 +108,7 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       template: "./public/views/drinks.pug",
-      filename: "itallap.html", 
+      filename: "kinalat.html", 
     }),
     new HtmlWebpackPlugin({
       template: "./public/views/contactPage.pug",

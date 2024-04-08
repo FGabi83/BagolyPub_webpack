@@ -9,6 +9,7 @@ html(lang="hu")
     link(rel='stylesheet', href='css/style.css')
     link(rel="icon", type="image/svg+xml", href="images/icons/logo_light.svg")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    
   body
     .container 
       block header
@@ -19,27 +20,26 @@ html(lang="hu")
             div
               nav.nav
                 block nav
-                  -const menu = [{ slug: '/index.html', title: 'Kezdőlap', }, { slug: '/itallap.html', title: 'Fogyaszthatók', }, { slug: '/kapcsolat.html', title: 'Kapcsolat', },]
+                  -const menu = [{ slug: '/', title: 'Kezdőlap', }, { slug: '/kinalat.html', title: 'Kínálat', }, { slug: '/kapcsolat.html', title: 'Kapcsolat', },]
                   each item, index in menu
                     a.nav--item.text--nav(href=item.slug, class=(index === menu.length - 1) ? 'nav--item__last' : '') #{item.title}
           .nav-menu 
             i.fa.fa-bars
       block hero
-      block messages
-      if locals.flashes
-        .flash-messages
-          - const categories = Object.keys(locals.flashes)
-          each category in categories
-            each message in flashes[category]
-              .flash(class=`flash--${category}`)
-                p.flash__text!= message 
-                button.flash__remove(onClick="this.parentElement.remove()") &times;
       block content
         main
         
       footer
-        p.footer-text.text--small © 2024 Copyright <span class="highlighted-text"> Bagoly Pub </span> / Developed by <span class="highlighted-text"> Simple Works </span>
+        .icons-wrapper
+          a(href="https://www.facebook.com" target="_blank")
+            i.icons.icons__light.fa-brands.fa-facebook-f
+          a(href="https://www.instagram.com" target="_blank")
+            i.icons.icons__light.fa-brands.fa-instagram
+        .links-wrapper
+          a.footer-text__link.text--small(href="/adatvédelmi-tájékoztató") Adatvédelmi Tájékoztató
+          a.footer-text__link.text--small(href="/impresszum") Impresszum
+        p.footer-text.text--small © 2024 Copyright Bagoly Pub
 
 
     block scripts
-      script(src="/App.bundle.js")
+      script(src="/dist/App.bundle.js")
