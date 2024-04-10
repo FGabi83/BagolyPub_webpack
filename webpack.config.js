@@ -114,6 +114,14 @@ const config = {
       template: "./views/contactPage.pug",
       filename: "kapcsolat.html", 
     }),
+    new HtmlWebpackPlugin({
+      template: "./views/privacyPolicy.pug",
+      filename: "adatvedelem.html", 
+    }),
+    new HtmlWebpackPlugin({
+      template: "./views/impressium.pug",
+      filename: "impresszium.html", 
+    }),
   ],
 };
 

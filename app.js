@@ -22,6 +22,13 @@ app.get('/kapcsolat.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'kapcsolat.html'));
 });
 
+app.get('/adatvedelem.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'adatvedelem.html'));
+});
+
+app.get('/impresszium.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'impresszium.html'));
+});
 
 // Export app for start.js
 module.exports = app;

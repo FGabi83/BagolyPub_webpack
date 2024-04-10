@@ -30,6 +30,10 @@ footer {
     .footer-text__link {
       color:           var(--brand-color);
     }
+
+    .footer-text__link:hover {
+      text-decoration: underline;
+    }
   
 
     
