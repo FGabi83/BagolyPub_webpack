@@ -5,7 +5,7 @@ footer {
     flex-flow:        column nowrap;
     justify-content:  center;  
     align-items:      center;
-    gap:              var(--line-height-small);
+    gap:              calc(var(--line-height-small) / 2);
     background:       var(--primary-color) 0% 0% no-repeat padding-box;
     opacity:          1;
     

@@ -1,6 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+/*const CopyWebpackPlugin = require("copy-webpack-plugin");*/
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 
@@ -43,7 +43,7 @@ const styles = {
   ], 
 };
 
-const images = {
+/*const images = {
   test: /\.(png|jpe?g|gif|svg)$/i,
   loader: "file-loader",
   options: {
@@ -57,7 +57,7 @@ const icons = {
   options: {
     name: "images/icons/[name].[ext]", // Így fogja a fájlokat a dist/images/icons mappába helyezni
   },
-};
+};*/
 
 const pug = {
   test: /\.pug$/,
@@ -78,15 +78,15 @@ const config = {
     App: "./public/javascripts/bagoly-app.js",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public", "dist"),
     filename: "[name].bundle.js",
   },
   module: {
-    rules: [javascript, styles, images, icons, pug],
+    rules: [javascript, styles, pug],
   },
   plugins: [
-    new MiniCssExtractPlugin({ filename: "css/style.css" }),
-    new CopyWebpackPlugin({
+    new MiniCssExtractPlugin({ filename: "style.css" }),
+    /*new CopyWebpackPlugin({
       patterns: [
         {
           from: "./public/images/photos", // forrás mappa
@@ -101,21 +101,21 @@ const config = {
           to: "images/icons",
         },
       ],
-    }),
+    }),*/
     new HtmlWebpackPlugin({
-      template: "./public/views/index.pug",
+      template: "./views/index.pug",
       filename: "index.html", 
     }),
     new HtmlWebpackPlugin({
-      template: "./public/views/drinks.pug",
+      template: "./views/drinks.pug",
       filename: "kinalat.html", 
     }),
     new HtmlWebpackPlugin({
-      template: "./public/views/contactPage.pug",
+      template: "./views/contactPage.pug",
       filename: "kapcsolat.html", 
     }),
   ],
 };
 
 module.exports = config;
-// Path: public/views/index.pug
+// Path: views/index.pug

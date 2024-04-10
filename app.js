@@ -5,20 +5,21 @@ const app = express();
 
 
 // Serve static files
-app.use(express.static(path.join(__dirname, 'dist')));
+/*app.use(express.static(path.join(__dirname, 'dist')));*/
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Temporary routes
-/*app.use('/', (req, res) => {
-  const drinks = require('./data/drinks.json');
-  const shots = drinks.filter(drink => drink.category === 'shots');
-  const brewedBeers = drinks.filter(drink => drink.category === 'brewed beer');
-  res.json({ shots, brewedBeers });
- });*/
 
-// Az index.html fájl szolgáltatása a gyökérkönyvtárból
+// Routes for specific HTML pages
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'index.html'));
+});
+
+app.get('/kinalat.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'kinalat.html'));
+});
+
+app.get('/kapcsolat.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'kapcsolat.html'));
 });
 
 

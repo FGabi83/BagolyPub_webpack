@@ -1,3 +1,6 @@
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/normalize.css ***!
+  \*****************************************************************************************************************/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -347,6 +350,9 @@
   [hidden] {
     display: none;
   }
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/base.css ***!
+  \************************************************************************************************************/
 /*-----------------------------------*\
 * BASIC SETTINGS OF THE PAGE
 \*-----------------------------------*/
@@ -373,7 +379,7 @@
     --logo-margins:         0.25rem;
     --header-height:        calc(var(--logo-size) + var(--logo-margins) * 2);
     --hero-height:          calc(100vh - var(--header-height));  
-    --footer-height:        9rem; 
+    --footer-height:        7.5rem; 
     /*font-size:   clamp(1rem, 2vh, 1.125rem);
   line-height: clamp(1.7rem, 3.5vh, 2.23rem);*/
     
@@ -399,6 +405,9 @@
   
 
 
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/typography.css ***!
+  \******************************************************************************************************************/
 html {
   font-size:        16px;
   color:            var(--primary-color);
@@ -513,6 +522,9 @@ html {
 }
 
 */
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/layout.css ***!
+  \**************************************************************************************************************/
 /*--------------------------------*\
 * LAYOUT 
 
@@ -554,6 +566,9 @@ html {
   }
 
 
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/buttons.css ***!
+  \***************************************************************************************************************/
 .btn {
       
     display:        inline-block;
@@ -601,6 +616,9 @@ html {
   
     
 
+/*!************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/highlighted-text.css ***!
+  \************************************************************************************************************************/
 .highlighted-text {
   /*letter-spacing:  0.15rem;*/
   text-transform:  uppercase;
@@ -608,6 +626,9 @@ html {
   font-weight:     bold;
   opacity:         1;
 }
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/header.css ***!
+  \**************************************************************************************************************/
 /*
 *Header...............main layout, color, logo size, navbar
 *
@@ -764,11 +785,11 @@ header {
           padding-top:     1px;
           width:           100%;
           height:          2rem;
-          text-align:      center;
           z-index:         100;
           display:         flex;
           justify-content: center;
           align-items:     center;
+         
         }
 
         .nav--wrapper.is-open .nav .nav--item__last { /*[1]*/
@@ -796,6 +817,9 @@ header {
     }
     
 
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/contacts.css ***!
+  \****************************************************************************************************************/
 .content-card {
     width:           100vw;
     min-height:      calc(100vh - var(--header-height) - var(--footer-height));
@@ -925,8 +949,11 @@ header {
 
  
 }
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/drinks.css ***!
+  \**************************************************************************************************************/
 .drinks--background {
-  background: url('../images/photos/onebeer.jpg') no-repeat center / cover;
+  background: url('/images/photos/onebeer.jpg') no-repeat center / cover;
   margin-top: var(--header-height);
   height:     calc(100vh - var(--header-height) - var(--footer-height));
   overflow:   auto;
@@ -1003,6 +1030,9 @@ header {
     
   } 
 }
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/hero.css ***!
+  \************************************************************************************************************/
 
 /* Hero picture */
 .hero {
@@ -1014,7 +1044,7 @@ header {
 /* Hero background */
 
 .hero--main {
-  background:  url('../images/photos/pub_interior.jpg') no-repeat center / cover; 
+  background:  url('/images/photos/pub_interior.jpg') no-repeat center / cover; 
   background-blend-mode: multiply;
   background-color:   rgba(var(--brand-color-rgb), .3);
   min-height:         var(--hero-height);
@@ -1067,6 +1097,9 @@ header {
   }
 
   
+/*!*****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/accordion.css ***!
+  \*****************************************************************************************************************/
 .accordion {
   display:         flex;
   flex-flow:       column nowrap;
@@ -1140,6 +1173,9 @@ header {
       
 
       
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/footer.css ***!
+  \**************************************************************************************************************/
 footer {
     height:           var(--footer-height);
     width:            100vw;
@@ -1147,7 +1183,7 @@ footer {
     flex-flow:        column nowrap;
     justify-content:  center;  
     align-items:      center;
-    gap:              var(--line-height-small);
+    gap:              calc(var(--line-height-small) / 2);
     background:       var(--primary-color) 0% 0% no-repeat padding-box;
     opacity:          1;
     
@@ -1175,6 +1211,9 @@ footer {
   
 
     
+/*!*************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/icons.css ***!
+  \*************************************************************************************************************/
 /* Social media icons */
 
 .icons-wrapper {
@@ -1218,9 +1257,15 @@ footer {
         border:           .125rem solid var(--tertiary-color);
       }  
 
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/hide.css ***!
+  \************************************************************************************************************/
 .hide {
   display: none;
 }
+/*!**************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./public/css/style.css ***!
+  \**************************************************************************************************************************************************************************/
 
 
 

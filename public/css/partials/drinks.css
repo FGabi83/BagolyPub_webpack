@@ -1,5 +1,5 @@
 .drinks--background {
-  background: url('../images/photos/onebeer.jpg') no-repeat center / cover;
+  background: url('/images/photos/onebeer.jpg') no-repeat center / cover;
   margin-top: var(--header-height);
   height:     calc(100vh - var(--header-height) - var(--footer-height));
   overflow:   auto;

@@ -2,7 +2,7 @@ extends layout
 
 
 block content
-  - const drinks = require('../../data/drinks.json')
+  - const drinks = require('../data/drinks.json')
   - const shots = drinks.filter(drink => drink.category === 'shots')
   - const brewedBeers = drinks.filter(drink => drink.category === 'brewed beer')
   - const bottledBeers = drinks.filter(drink => drink.category === 'bottled beer')
