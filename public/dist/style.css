@@ -438,6 +438,8 @@ html {
       color:          var(--brand-color);
     }
 
+      
+      
       .title__hero {
         font-size:      calc(2 * var(--font-size-big)); 
         line-height:    calc(2 * var(--line-height-big));
@@ -455,13 +457,24 @@ html {
       margin-bottom: 0.625rem; 
     }
 
-   
-      .text__hero {
-        font-size:   calc(1.5 * var(--font-size-regular)); 
-        line-height: calc(1.5 * var(--line-height-regular));
-        text-align:  center;
+    .title__center {
+      text-align: center;
+      margin-top:    1rem;
+      margin-bottom: 1rem;
+    }
+
+    .title__light {
+      color: var(--primary-color);
+    }
+
+
+
+    .text__hero {
+      font-size:   calc(1.5 * var(--font-size-regular)); 
+      line-height: calc(1.5 * var(--line-height-regular));
+      text-align:  center;
         
-      }
+    }
 
     .text--medium {
       font-size:   var(--font-size-medium);
@@ -483,7 +496,25 @@ html {
       color:          var(--tertiary-color);
     }
 
-    
+      .text__dark {
+        color: var(--brand-color);
+      }
+
+      .text__bold {
+        font-weight: bold;
+      }
+
+      .text__50 {
+        width:   50%;
+        margin:  0 auto;
+        /*padding: 1rem;*/
+      }
+
+      @media (max-width: 600px) {
+        .text__50 {
+          width: min(420px, 90%);
+        }
+      }   
 
 /*
 
@@ -563,6 +594,12 @@ html {
     gap:             1.875rem;
     width:           100vw;
     margin-top:      var(--header-height);
+  }
+
+  .main__vertical {
+    flex-flow:      column nowrap;
+    gap:            1rem;
+    padding:        1rem .5rem 1rem .5rem;
   }
 
 
@@ -955,9 +992,8 @@ header {
 .drinks--background {
   background: url('/images/photos/onebeer.jpg') no-repeat center / cover;
   margin-top: var(--header-height);
-  height:     calc(100vh - var(--header-height) - var(--footer-height));
+  min-height: calc(100vh - var(--header-height));
   overflow:   auto;
-  
   
 }
 
@@ -1176,69 +1212,57 @@ header {
 /*!***************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/privacy.css ***!
   \***************************************************************************************************************/
-.privacy-wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  width: 100%;
+
+ul.privacy-list {
+  list-style-type: none;
+  margin:          auto;
 }
 
 
 
-  .privacy-title, .privacy-subtitle {
-    text-align: center;
-    margin-bottom: 1rem;
-    
+.privacy-contacts__wrapper {
+  display:         flex;
+  flex-flow:       column nowrap;
+  justify-content: flex-start;
+  align-items:     center;
+  gap:             0;
+  width:           100%;
+  margin-bottom:   1rem;
+}
+
+  .privacy-text {
+    padding: 1rem;
   }
 
+  .privacy-contacts {
+    padding-top:    0;
+    padding-bottom: 0;
+  }
+
+    .privacy-link {
+      color: var(--brand-color);
+    }
+
+    .privacy-link:hover {
+      text-decoration: underline;
+    }
 
   
-  .privacy-text {
-  width:  75%;
-  margin: 0 auto;
-  padding: 1rem;
-  color:   var(--brand-color);
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/impressium.css ***!
+  \******************************************************************************************************************/
+.impressium-wrapper {
+  display:         flex;
+  flex-flow:       column nowrap;
+  justify-content: flex-start;
+  align-items:     flex-start;
+  
+}
+
+  .impressium-subwrapper {
+    margin-top:    1rem;
+    margin-bottom: 1rem;
   }
-
-    .privacy-bold {
-      font-weight: bold;
-    }
-
-
-
-  ul.privacy-text {
-  list-style-type: none;
-  margin:  auto;
-  }
-
-
-
-  .privacy-contacts__wrapper {
-    display:         flex;
-    flex-flow:       column nowrap;
-    justify-content: flex-start;
-    align-items:     center;
-    gap:             0;
-    width:           100%;
-    margin-bottom:   2rem;
-  }
-
-    .privacy-contacts {
-      padding-top:    0;
-      padding-bottom: 0;
-    }
-
-      .privacy-link {
-        color: var(--brand-color);
-      }
-
-      .privacy-link:hover {
-        text-decoration: underline;
-      }
-
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/footer.css ***!
   \**************************************************************************************************************/
