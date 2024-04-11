@@ -1010,6 +1010,7 @@ header {
 
 /*
 * 1) Dark blue separator under the table header
+* 2) Making sure all names start with capital letter folloewd by lowercase
 */
 
 .table-container {
@@ -1048,16 +1049,14 @@ header {
     .table .table-items {
       padding:         .3125rem;
       width:           auto;
-      
-      /*color:        rgba(188, 149, 108, 1);*/
-      }
+    }
 
       .drinks-name {
-        text-transform: lowercase;
+        text-transform: lowercase; /*2*/
       }
 
       .drinks-name::first-letter {
-        text-transform: uppercase;
+        text-transform: uppercase; /*2*/
       }
 
 /*MOBILE VERSION*/
