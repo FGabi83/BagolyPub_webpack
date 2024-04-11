@@ -2,7 +2,7 @@ extends layout
 
 
 block content
-  - const drinks = require('../data/drinks.json')
+  - const drinks = require('../data/finalDrinks.json')
   - const shots = drinks.filter(drink => drink.category === 'shots')
   - const brewedBeers = drinks.filter(drink => drink.category === 'brewed beer')
   - const bottledBeers = drinks.filter(drink => drink.category === 'bottled beer')
@@ -19,7 +19,7 @@ block content
             td Korsó 
           each drink in brewedBeers 
             tr.table-items 
-              td= drink.name
+              td.drinks-name= drink.name
               td #{drink.smallPrice} Ft
               td #{drink.largePrice} Ft
       .table-container     
@@ -30,18 +30,18 @@ block content
             td Ár 
           each drink in bottledBeers 
             tr.table-items 
-              td= drink.name
+              td.drinks-name= drink.name
               td #{drink.smallPrice} Ft
       .table-container  
         table.table
           caption.subtitle.table-title Rövid Italok
           thead.table-header
             td Megnevezés
-            td 2 cl 
-            td 4 cl
+            td 3 cl 
+            td 5 cl
           each drink in shots 
             tr.table-items 
-              td= drink.name
+              td.drinks-name= drink.name
               td #{drink.smallPrice} Ft
               td #{drink.largePrice} Ft
       .table-container   
@@ -52,7 +52,7 @@ block content
             td Ár 
           each drink in softDrinks 
             tr.table-items 
-              td= drink.name
+              td.drinks-name= drink.name
               td #{drink.smallPrice} Ft       
       .table-container#etel   
         table.table
@@ -62,5 +62,5 @@ block content
             td Ár 
           each dish in dishes 
             tr.table-items 
-              td= dish.name
+              td.drinks-name= dish.name
               td #{dish.smallPrice} Ft       

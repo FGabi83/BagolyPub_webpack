@@ -1048,10 +1048,17 @@ header {
     .table .table-items {
       padding:         .3125rem;
       width:           auto;
+      
       /*color:        rgba(188, 149, 108, 1);*/
       }
 
+      .drinks-name {
+        text-transform: lowercase;
+      }
 
+      .drinks-name::first-letter {
+        text-transform: uppercase;
+      }
 
 /*MOBILE VERSION*/
 
