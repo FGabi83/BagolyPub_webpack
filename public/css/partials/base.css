@@ -16,8 +16,8 @@
     --line-height-regular:  clamp(1.5rem, 3vh, 1.875rem);
     --font-size-big:        calc(var(--font-size-regular) * 2);
     --line-height-big:      calc(var(--line-height-regular) * 1.66);
-    --font-size-medium:     0.875rem;
-    --line-height-medium:   1.125rem;
+    --font-size-medium:     calc(var(--font-size-regular) * 1.2);
+    --line-height-medium:   calc(var(--line-height-regular) * 1.2);
     --font-size-small:      0.75rem;
     --line-height-small:    1rem;
     --logo-size:            4.5rem;

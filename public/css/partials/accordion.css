@@ -9,8 +9,10 @@
 
   .js-accordion--content {
     display:       none;
-    background:    rgba(var(--secondary-color-rgb), .9);
-    color:         var(--brand-color);
+    background:    rgba(var(--brand-color-rgb), .7);
+    color:         var(--secondary-color);
+    font-size:     var(--font-size-medium);
+    line-height:   var(--line-height-medium);
     padding:       2rem;
     border-radius: 2px;
     width:         80%;
@@ -37,7 +39,6 @@
       }
 
       .accordion--link:hover {
-        color: var(--brand-color);
         text-decoration: underline;
       }
 

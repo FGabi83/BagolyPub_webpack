@@ -371,8 +371,8 @@
     --line-height-regular:  clamp(1.5rem, 3vh, 1.875rem);
     --font-size-big:        calc(var(--font-size-regular) * 2);
     --line-height-big:      calc(var(--line-height-regular) * 1.66);
-    --font-size-medium:     0.875rem;
-    --line-height-medium:   1.125rem;
+    --font-size-medium:     calc(var(--font-size-regular) * 1.2);
+    --line-height-medium:   calc(var(--line-height-regular) * 1.2);
     --font-size-small:      0.75rem;
     --line-height-small:    1rem;
     --logo-size:            4.5rem;
@@ -964,7 +964,8 @@ header {
 
 /*
 * 1) Dark blue separator under the table header
-* 2) Making sure all names start with capital letter folloewd by lowercase
+* 2) Making sure all names start with capital letter followed by lowercase
+* 3) Creating gap between the table header and the table items
 */
 
 .table--container {
@@ -984,13 +985,14 @@ header {
     height:          auto;
     opacity:         1;
     border-collapse: collapse; /* 1 */
+    border-spacing:  0;
   }
 
     .table--title {
       width:          100%;
       text-transform: uppercase;
       font-weight:    bold;
-      margin-bottom:  1rem;
+      /*margin-bottom:  1rem;*/
     }
      
     .table--header {
@@ -998,12 +1000,27 @@ header {
       border-bottom: 1px solid rgba(var(--primary-color-rgb), 1); /* 1 */
       width:         auto;
       opacity:       1;
-    }
-
-    .table .table--items {
-      padding:         .3125rem;
+      
       
     }
+
+      .table--header td:first-child {
+        text-transform: uppercase;
+      }
+
+    
+    .table--header::before { /*3*/
+      content: '';
+      display: block;
+      width:   100%;
+      height:  1.5rem;
+    }
+
+    .table--gap {  /*3*/
+      height: .3rem;
+    }
+
+    
 
       .drinks--name {
         text-transform: lowercase; /*2*/
@@ -1110,8 +1127,10 @@ header {
 
   .js-accordion--content {
     display:       none;
-    background:    rgba(var(--secondary-color-rgb), .9);
-    color:         var(--brand-color);
+    background:    rgba(var(--brand-color-rgb), .7);
+    color:         var(--secondary-color);
+    font-size:     var(--font-size-medium);
+    line-height:   var(--line-height-medium);
     padding:       2rem;
     border-radius: 2px;
     width:         80%;
@@ -1138,7 +1157,6 @@ header {
       }
 
       .accordion--link:hover {
-        color: var(--brand-color);
         text-decoration: underline;
       }
 
