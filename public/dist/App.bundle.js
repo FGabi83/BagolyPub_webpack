@@ -10,8 +10,8 @@
 
 __webpack_require__.r(__webpack_exports__);
 function accordion() {
-  var button = document.querySelector('.accordion-btn');
-  var content = document.querySelector('.accordion-content');
+  var button = document.querySelector('.js-accordion--btn');
+  var content = document.querySelector('.js-accordion--content');
   function toggleText() {
     if (button.textContent === 'Tovább') {
       button.textContent = 'Vissza';
@@ -20,7 +20,7 @@ function accordion() {
     }
   }
   button.addEventListener('click', function () {
-    content.classList.toggle('active');
+    content.classList.toggle('js-active');
     toggleText();
   });
 }
@@ -37,7 +37,7 @@ function accordion() {
 
 __webpack_require__.r(__webpack_exports__);
 function activeNavItem() {
-  var links = document.querySelectorAll('.nav--item');
+  var links = document.querySelectorAll('.js-nav--item');
   var path = window.location.pathname;
   var pathArray = path.split('/');
   var currentPath = pathArray[pathArray.length - 1];
@@ -47,7 +47,7 @@ function activeNavItem() {
     var linkCurrentPath = linkArray[linkArray.length - 1];
     console.log(linkCurrentPath);
     if (linkCurrentPath === currentPath) {
-      link.classList.add('nav--item__active');
+      link.classList.add('js-nav--item__active');
     }
   });
 }
@@ -92,11 +92,11 @@ NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn
 
 __webpack_require__.r(__webpack_exports__);
 function dropdownMenu() {
-  var navMenu = document.querySelector(".nav-menu");
-  var navWrapper = document.querySelector(".nav--wrapper");
+  var navMenu = document.querySelector(".js-nav--menu");
+  var navWrapper = document.querySelector(".js-nav--wrapper");
   navMenu.addEventListener("click", function () {
-    navWrapper.classList.toggle("is-open");
-    navMenu.classList.toggle("highlight");
+    navWrapper.classList.toggle("js-is-open");
+    navMenu.classList.toggle("js-highlight");
   });
 }
 /* harmony default export */ __webpack_exports__["default"] = (dropdownMenu);

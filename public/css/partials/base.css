@@ -25,9 +25,6 @@
     --header-height:        calc(var(--logo-size) + var(--logo-margins) * 2);
     --hero-height:          calc(100vh - var(--header-height));  
     --footer-height:        7.5rem; 
-    /*font-size:   clamp(1rem, 2vh, 1.125rem);
-  line-height: clamp(1.7rem, 3.5vh, 2.23rem);*/
-    
 } 
 
 /* normalize CSS */

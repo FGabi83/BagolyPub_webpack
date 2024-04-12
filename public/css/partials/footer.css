@@ -11,7 +11,7 @@ footer {
     
   }
 
-  .links-wrapper {
+  .links--wrapper {
     display:         flex;
     flex-flow:       column nowrap;
     justify-content: center;
@@ -19,7 +19,7 @@ footer {
     gap:             0;
   }
   
-    .footer-text {
+    .footer--text {
       width:           69.375rem;
       text-align:      center;
       letter-spacing:  0.15rem;
@@ -27,11 +27,11 @@ footer {
       color:           var(--tertiary-color);
     }
 
-    .footer-text__link {
+    .footer--text__link {
       color:           var(--brand-color);
     }
 
-    .footer-text__link:hover {
+    .footer--text__link:hover {
       text-decoration: underline;
     }
   

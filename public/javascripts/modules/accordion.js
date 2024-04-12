@@ -1,6 +1,6 @@
 function accordion() {
-    const button = document.querySelector('.accordion-btn');
-    const content = document.querySelector('.accordion-content');
+    const button = document.querySelector('.js-accordion--btn');
+    const content = document.querySelector('.js-accordion--content');
     
     function toggleText() {
       if (button.textContent === 'Tovább') {
@@ -11,7 +11,7 @@ function accordion() {
     }
 
     button.addEventListener('click', () => {
-      content.classList.toggle('active');
+      content.classList.toggle('js-active');
       toggleText();
     });
 

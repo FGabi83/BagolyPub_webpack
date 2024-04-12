@@ -1,4 +1,4 @@
-.impressium-wrapper {
+.impressium--wrapper {
   display:         flex;
   flex-flow:       column nowrap;
   justify-content: flex-start;
@@ -6,7 +6,7 @@
   
 }
 
-  .impressium-subwrapper {
+  .impressium--subwrapper {
     margin-top:    1rem;
     margin-bottom: 1rem;
   }

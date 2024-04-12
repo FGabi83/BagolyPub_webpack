@@ -7,7 +7,7 @@
 }
 
 
-  .drinks-wrapper {
+  .drinks--wrapper {
     width:           90%;
     display:         flex;
     flex-flow:       column nowrap;
@@ -22,7 +22,7 @@
 * 2) Making sure all names start with capital letter folloewd by lowercase
 */
 
-.table-container {
+.table--container {
   background-color:  rgba(var(--secondary-color-rgb), .9);
   border-radius:     2px;
   padding:           1rem;
@@ -41,42 +41,45 @@
     border-collapse: collapse; /* 1 */
   }
 
-    .table-title {
+    .table--title {
       width:          100%;
       text-transform: uppercase;
       font-weight:    bold;
       margin-bottom:  1rem;
     }
      
-    .table thead {
+    .table--header {
       color:         rgba(var(--brand-color-rgb), 1);
       border-bottom: 1px solid rgba(var(--primary-color-rgb), 1); /* 1 */
       width:         auto;
       opacity:       1;
     }
 
-    .table .table-items {
+    .table .table--items {
       padding:         .3125rem;
-      width:           auto;
+      
     }
 
-      .drinks-name {
+      .drinks--name {
         text-transform: lowercase; /*2*/
+        
       }
 
-      .drinks-name::first-letter {
+      .drinks--name::first-letter {
         text-transform: uppercase; /*2*/
       }
+
+      
 
 /*MOBILE VERSION*/
 
 @media (max-width: 900px) {
-  .drinks-wrapper {
+  .drinks--wrapper {
     width:   100vw;
     padding: 1rem .5rem 1rem .5rem;
     
   }
-  .table-container {
+  .table--container {
     width:   max(370px, 90%);
     
   } 

@@ -66,17 +66,17 @@ html {
         
     }
 
-    .text--medium {
+    .text__medium {
       font-size:   var(--font-size-medium);
       line-height: var(--line-height-medium);
     }
 
-    .text--small {
+    .text__small {
       font-size:   var(--font-size-small);
       line-height: var(--line-height-small);
     }
 
-    .text--nav {
+    .text__nav {
       font-family:    'Josefin Sans', sans-serif;
       font-size:      var(--font-size-small);
       line-height:    var(--line-height-small);

@@ -13,8 +13,8 @@
   }
 
   .map {grid-area: map;}
-  .contact-wrapper {grid-area: contact-wrapper;}
-  .open-wrapper {grid-area: open-wrapper;}
+  .contact--wrapper {grid-area: contact-wrapper;}
+  .open--wrapper {grid-area: open-wrapper;}
 
   .map {
     width:           min(100%, 563px);
@@ -22,22 +22,13 @@
     border-radius:   2px;
     object-fit:      cover;
     border:          1px solid var(--background-color);
-    justify-self:      end;
+    justify-self:    flex-end;
     
   }
 
-  /*.inner-devider {
-    width:           min(40%, 580px);
-    aspect-ratio:    1/1;
-    display:         flex;
-    flex-flow:       column nowrap;
-    justify-content: flex-start;
-    gap:             2rem;
-    align-items:     flex-start;
-   }*/
+ 
 
-
-    .contact-wrapper, .open-wrapper {
+    .contact--wrapper, .open--wrapper {
       display:         flex;
       flex-flow:       column nowrap;
       justify-content: flex-start;
@@ -51,7 +42,7 @@
       /* Phone and email */
 
         .phone, .email {
-          display:       block;
+          display:        block;
           text-transform: none;
           margin-bottom:  .25rem;
 
@@ -66,42 +57,8 @@
   
 
 
-      /* Social media icons */
-
-      .icons-wrapper {
-        /*width:           50%;*/
-        height:          2rem;
-        display:         flex;
-        flex-flow:       row nowrap;
-        justify-content: flex-start;
-        gap:             .625rem;
-  
-      }
-  
-        .icons {
-          display:          flex;
-          flex-flow:        row nowrap;
-          justify-content:  center;
-          align-items:      center;
-          width:            2rem;
-          height:           2rem;
-          background-color: var(--brand-color);
-          color:            var(--secondary-color);
-          opacity:          .8;
-          border-radius:    50%;
-        }
-
-        .icons:hover {
-          background-color: transparent;
-          color:            var(--brand-color);
-          border:           .125rem solid var(--brand-color);
-        }  
-
-    
-
-
-
-@media (max-width: 923px) {
+      
+ @media (max-width: 923px) {
   .content-card {
     grid-template-areas: 
       "contact-wrapper"  
@@ -115,7 +72,7 @@
     /*overflow:              auto;*/
   }
 
-  .contact-wrapper {
+  .contact--wrapper {
     padding-top:  2rem;
   }
   

@@ -52,7 +52,7 @@ header {
   
   /* Navbar */
 
-  .nav--wrapper {
+  .js-nav--wrapper {
     display: flex;
   }
 
@@ -67,7 +67,7 @@ header {
     
   }
   
-    .nav--item {
+    .js-nav--item {
       opacity:         .65;
       position:        relative; /* to position the underline */
       display:         inline-block; 
@@ -75,7 +75,7 @@ header {
   
     /*in case of hover, underline is shown at the bottom of the navbar*/
   
-      .nav--item:hover::after {
+      .js-nav--item:hover::after {
         content:          "";
         display:          block;
         width:            100%;
@@ -88,14 +88,14 @@ header {
       }
     
   
-      .nav--item:hover, .nav-menu:hover {
+      .js-nav--item:hover, .js-nav--menu:hover {
         opacity:          1;
         transition:       0.3s;
       }
 
     /*Active link is highlighted*/
   
-      .nav--item__active {
+      .js-nav--item__active {
         opacity:          1;
       }
   
@@ -103,7 +103,7 @@ header {
   /*Sandvich menu is not shown on desktop */
   
   
-  .nav-menu {
+  .js-nav--menu {
     display:         none;
     color:           var(--tertiary-color);
        
@@ -120,7 +120,7 @@ header {
 */
 
     @media (max-width: 991px) {
-    .nav--wrapper {
+    .js-nav--wrapper {
       display: flex;
       width:   100vw;
       position: fixed;
@@ -128,7 +128,7 @@ header {
       left:    0;
     }
 
-    .nav--wrapper > * {
+    .js-nav--wrapper > * {
       width: 100vw;
     }
       .nav {
@@ -145,7 +145,7 @@ header {
         transition:       max-height 0.5s ease-out;
       }
     
-      .nav--wrapper.is-open .nav {
+      .js-nav--wrapper.js-is-open .nav {
         max-height: 100%;
       }
     
@@ -161,26 +161,26 @@ header {
          
         }
 
-        .nav--wrapper.is-open .nav .nav--item__last { /*[1]*/
+        .js-nav--wrapper.js-is-open .nav .nav--item__last { /*[1]*/
           border-bottom: none;
         }
     
             
-        .nav--wrapper.is-open .nav > .nav--item:hover::after { /* [2] */
+        .js-nav--wrapper.js-is-open .nav > .js-nav--item:hover::after { /* [2] */
           display: none;
         }
          
       
-    .nav-menu {
+    .js-nav--menu {
       display:          block;
       opacity:          .65;
     }
     
-    .nav-menu:hover { /*[2]*/
+    .js-nav--menu:hover { /*[2]*/
       opacity:          .65;
     }
     
-      .nav-menu.highlight {
+      .js-nav--menu.js-highlight {
         opacity:          1;
       }
     }

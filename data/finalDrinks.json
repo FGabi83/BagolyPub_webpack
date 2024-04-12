@@ -22,4 +22,14 @@
 {"name":"Edelweiß","category":"brewed beer","smallPrice":890,"largePrice":1290},
 {"name":"Mosaic ale","category":"brewed beer","smallPrice":890,"largePrice":1290},
 {"name":"PLNOTUČNÁ","category":"brewed beer","smallPrice":790,"largePrice":1090},
-{"name":"FRANCINŮV LEŽÁK","category":"brewed beer","smallPrice":590,"largePrice":790}]
+{"name":"FRANCINŮV LEŽÁK","category":"brewed beer","smallPrice":590,"largePrice":790},
+{"name":"GRIMBERGEN ROUGE","category":"bottled beer","smallPrice":100,"largePrice":null},
+{"name":"Heineken","category":"bottled beer","smallPrice":100,"largePrice":null},
+{"name":"Heineken Silver","category":"bottled beer","smallPrice":100,"largePrice":null},
+{"name":"Heineken 0.0%","category":"bottled beer","smallPrice":100,"largePrice":null},
+{"name":"Gösser citrom 0.0%","category":"bottled beer","smallPrice":100,"largePrice":null},
+{"name":"Birra Moretti","category":"bottled beer","smallPrice":100,"largePrice":null},
+{"name":"Pepsi","category":"soft drinks","smallPrice":100,"largePrice":null},
+{"name":"Narancs","category":"soft drinks","smallPrice":100,"largePrice":null},
+{"name":"Tonik","category":"soft drinks","smallPrice":100,"largePrice":null},
+{"name":"Fever Tree tonik","category":"soft drinks","smallPrice":100,"largePrice":null}]

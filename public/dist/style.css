@@ -380,9 +380,6 @@
     --header-height:        calc(var(--logo-size) + var(--logo-margins) * 2);
     --hero-height:          calc(100vh - var(--header-height));  
     --footer-height:        7.5rem; 
-    /*font-size:   clamp(1rem, 2vh, 1.125rem);
-  line-height: clamp(1.7rem, 3.5vh, 2.23rem);*/
-    
 } 
 
 /* normalize CSS */
@@ -476,17 +473,17 @@ html {
         
     }
 
-    .text--medium {
+    .text__medium {
       font-size:   var(--font-size-medium);
       line-height: var(--line-height-medium);
     }
 
-    .text--small {
+    .text__small {
       font-size:   var(--font-size-small);
       line-height: var(--line-height-small);
     }
 
-    .text--nav {
+    .text__nav {
       font-family:    'Josefin Sans', sans-serif;
       font-size:      var(--font-size-small);
       line-height:    var(--line-height-small);
@@ -627,25 +624,25 @@ html {
     transition:       0.3s;
   }
   
-    .btn-primary {
+    .btn__primary {
       background:   var(--brand-color) 0% 0% no-repeat padding-box;
       border-color: var(--brand-color);
       color:        var(--secondary-color);
     }
 
-    .btn-primary:hover {
+    .btn__primary:hover {
       background:   var(--secondary-color);
       border-color: var(--brand-color);
       color:        var(--brand-color);
     }
 
-    .btn-hollow {
+    .btn__hollow {
       background:   transparent;
       border-color: var(--secondary-color);
       color:        var(--secondary-color);
     }
 
-    .btn-hollow:hover {
+    .btn__hollow:hover {
       background:   var(--secondary-color);
       border-color: var(--secondary-color);
       color:        var(--brand-color);
@@ -720,7 +717,7 @@ header {
   
   /* Navbar */
 
-  .nav--wrapper {
+  .js-nav--wrapper {
     display: flex;
   }
 
@@ -735,7 +732,7 @@ header {
     
   }
   
-    .nav--item {
+    .js-nav--item {
       opacity:         .65;
       position:        relative; /* to position the underline */
       display:         inline-block; 
@@ -743,7 +740,7 @@ header {
   
     /*in case of hover, underline is shown at the bottom of the navbar*/
   
-      .nav--item:hover::after {
+      .js-nav--item:hover::after {
         content:          "";
         display:          block;
         width:            100%;
@@ -756,14 +753,14 @@ header {
       }
     
   
-      .nav--item:hover, .nav-menu:hover {
+      .js-nav--item:hover, .js-nav--menu:hover {
         opacity:          1;
         transition:       0.3s;
       }
 
     /*Active link is highlighted*/
   
-      .nav--item__active {
+      .js-nav--item__active {
         opacity:          1;
       }
   
@@ -771,7 +768,7 @@ header {
   /*Sandvich menu is not shown on desktop */
   
   
-  .nav-menu {
+  .js-nav--menu {
     display:         none;
     color:           var(--tertiary-color);
        
@@ -788,7 +785,7 @@ header {
 */
 
     @media (max-width: 991px) {
-    .nav--wrapper {
+    .js-nav--wrapper {
       display: flex;
       width:   100vw;
       position: fixed;
@@ -796,7 +793,7 @@ header {
       left:    0;
     }
 
-    .nav--wrapper > * {
+    .js-nav--wrapper > * {
       width: 100vw;
     }
       .nav {
@@ -813,7 +810,7 @@ header {
         transition:       max-height 0.5s ease-out;
       }
     
-      .nav--wrapper.is-open .nav {
+      .js-nav--wrapper.js-is-open .nav {
         max-height: 100%;
       }
     
@@ -829,26 +826,26 @@ header {
          
         }
 
-        .nav--wrapper.is-open .nav .nav--item__last { /*[1]*/
+        .js-nav--wrapper.js-is-open .nav .nav--item__last { /*[1]*/
           border-bottom: none;
         }
     
             
-        .nav--wrapper.is-open .nav > .nav--item:hover::after { /* [2] */
+        .js-nav--wrapper.js-is-open .nav > .js-nav--item:hover::after { /* [2] */
           display: none;
         }
          
       
-    .nav-menu {
+    .js-nav--menu {
       display:          block;
       opacity:          .65;
     }
     
-    .nav-menu:hover { /*[2]*/
+    .js-nav--menu:hover { /*[2]*/
       opacity:          .65;
     }
     
-      .nav-menu.highlight {
+      .js-nav--menu.js-highlight {
         opacity:          1;
       }
     }
@@ -872,8 +869,8 @@ header {
   }
 
   .map {grid-area: map;}
-  .contact-wrapper {grid-area: contact-wrapper;}
-  .open-wrapper {grid-area: open-wrapper;}
+  .contact--wrapper {grid-area: contact-wrapper;}
+  .open--wrapper {grid-area: open-wrapper;}
 
   .map {
     width:           min(100%, 563px);
@@ -881,22 +878,13 @@ header {
     border-radius:   2px;
     object-fit:      cover;
     border:          1px solid var(--background-color);
-    justify-self:      end;
+    justify-self:    flex-end;
     
   }
 
-  /*.inner-devider {
-    width:           min(40%, 580px);
-    aspect-ratio:    1/1;
-    display:         flex;
-    flex-flow:       column nowrap;
-    justify-content: flex-start;
-    gap:             2rem;
-    align-items:     flex-start;
-   }*/
+ 
 
-
-    .contact-wrapper, .open-wrapper {
+    .contact--wrapper, .open--wrapper {
       display:         flex;
       flex-flow:       column nowrap;
       justify-content: flex-start;
@@ -910,7 +898,7 @@ header {
       /* Phone and email */
 
         .phone, .email {
-          display:       block;
+          display:        block;
           text-transform: none;
           margin-bottom:  .25rem;
 
@@ -925,42 +913,8 @@ header {
   
 
 
-      /* Social media icons */
-
-      .icons-wrapper {
-        /*width:           50%;*/
-        height:          2rem;
-        display:         flex;
-        flex-flow:       row nowrap;
-        justify-content: flex-start;
-        gap:             .625rem;
-  
-      }
-  
-        .icons {
-          display:          flex;
-          flex-flow:        row nowrap;
-          justify-content:  center;
-          align-items:      center;
-          width:            2rem;
-          height:           2rem;
-          background-color: var(--brand-color);
-          color:            var(--secondary-color);
-          opacity:          .8;
-          border-radius:    50%;
-        }
-
-        .icons:hover {
-          background-color: transparent;
-          color:            var(--brand-color);
-          border:           .125rem solid var(--brand-color);
-        }  
-
-    
-
-
-
-@media (max-width: 923px) {
+      
+ @media (max-width: 923px) {
   .content-card {
     grid-template-areas: 
       "contact-wrapper"  
@@ -974,7 +928,7 @@ header {
     /*overflow:              auto;*/
   }
 
-  .contact-wrapper {
+  .contact--wrapper {
     padding-top:  2rem;
   }
   
@@ -998,7 +952,7 @@ header {
 }
 
 
-  .drinks-wrapper {
+  .drinks--wrapper {
     width:           90%;
     display:         flex;
     flex-flow:       column nowrap;
@@ -1013,7 +967,7 @@ header {
 * 2) Making sure all names start with capital letter folloewd by lowercase
 */
 
-.table-container {
+.table--container {
   background-color:  rgba(var(--secondary-color-rgb), .9);
   border-radius:     2px;
   padding:           1rem;
@@ -1032,42 +986,45 @@ header {
     border-collapse: collapse; /* 1 */
   }
 
-    .table-title {
+    .table--title {
       width:          100%;
       text-transform: uppercase;
       font-weight:    bold;
       margin-bottom:  1rem;
     }
      
-    .table thead {
+    .table--header {
       color:         rgba(var(--brand-color-rgb), 1);
       border-bottom: 1px solid rgba(var(--primary-color-rgb), 1); /* 1 */
       width:         auto;
       opacity:       1;
     }
 
-    .table .table-items {
+    .table .table--items {
       padding:         .3125rem;
-      width:           auto;
+      
     }
 
-      .drinks-name {
+      .drinks--name {
         text-transform: lowercase; /*2*/
+        
       }
 
-      .drinks-name::first-letter {
+      .drinks--name::first-letter {
         text-transform: uppercase; /*2*/
       }
+
+      
 
 /*MOBILE VERSION*/
 
 @media (max-width: 900px) {
-  .drinks-wrapper {
+  .drinks--wrapper {
     width:   100vw;
     padding: 1rem .5rem 1rem .5rem;
     
   }
-  .table-container {
+  .table--container {
     width:   max(370px, 90%);
     
   } 
@@ -1151,7 +1108,7 @@ header {
   gap:             1.5rem;  
 }
 
-  .accordion-content {
+  .js-accordion--content {
     display:       none;
     background:    rgba(var(--secondary-color-rgb), .9);
     color:         var(--brand-color);
@@ -1161,42 +1118,36 @@ header {
    
   }
 
-  .accordion-content.active {
+  .js-accordion--content.js-active {
     display: block;
   }
 
   
-    .accordion-text {
+    .accordion--text {
       margin-bottom: 1rem;
     }
 
 
-    .accordion-list {
-      /*list-style-type: none;*/
+    .accordion--list {
       margin-bottom:   1rem;
       padding-left:    1.5rem;
     }
 
-      .accordion-link {
+      .accordion--link {
         color: var(--primary-color);
       }
 
-      .accordion-link:hover {
+      .accordion--link:hover {
         color: var(--brand-color);
         text-decoration: underline;
       }
 
-      
-
-      /*.accordion-list li::before {
-        /*display: inline-block;*/
-       /* padding-left: 1rem;
-      }*/
-
     
 
+
+
   @media (max-width: 864px) {
-    .accordion-content {
+    .js-accordion--content {
       width: 100%;
     }
   }
@@ -1205,7 +1156,7 @@ header {
     .accordion {
       width: 100%;
     }
-    .accordion-content {
+    .js-accordion--content {
       padding-left: 1rem;
       padding-right: 1rem;
     }
@@ -1219,14 +1170,14 @@ header {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/privacy.css ***!
   \***************************************************************************************************************/
 
-ul.privacy-list {
+ul.privacy--list {
   list-style-type: none;
   margin:          auto;
 }
 
 
 
-.privacy-contacts__wrapper {
+.privacy--contacts__wrapper {
   display:         flex;
   flex-flow:       column nowrap;
   justify-content: flex-start;
@@ -1236,20 +1187,16 @@ ul.privacy-list {
   margin-bottom:   1rem;
 }
 
-  .privacy-text {
-    padding: 1rem;
-  }
-
-  .privacy-contacts {
+  .privacy--contacts {
     padding-top:    0;
     padding-bottom: 0;
   }
 
-    .privacy-link {
+    .privacy--link {
       color: var(--brand-color);
     }
 
-    .privacy-link:hover {
+    .privacy--link:hover {
       text-decoration: underline;
     }
 
@@ -1257,7 +1204,7 @@ ul.privacy-list {
 /*!******************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/impressium.css ***!
   \******************************************************************************************************************/
-.impressium-wrapper {
+.impressium--wrapper {
   display:         flex;
   flex-flow:       column nowrap;
   justify-content: flex-start;
@@ -1265,7 +1212,7 @@ ul.privacy-list {
   
 }
 
-  .impressium-subwrapper {
+  .impressium--subwrapper {
     margin-top:    1rem;
     margin-bottom: 1rem;
   }
@@ -1285,7 +1232,7 @@ footer {
     
   }
 
-  .links-wrapper {
+  .links--wrapper {
     display:         flex;
     flex-flow:       column nowrap;
     justify-content: center;
@@ -1293,7 +1240,7 @@ footer {
     gap:             0;
   }
   
-    .footer-text {
+    .footer--text {
       width:           69.375rem;
       text-align:      center;
       letter-spacing:  0.15rem;
@@ -1301,11 +1248,11 @@ footer {
       color:           var(--tertiary-color);
     }
 
-    .footer-text__link {
+    .footer--text__link {
       color:           var(--brand-color);
     }
 
-    .footer-text__link:hover {
+    .footer--text__link:hover {
       text-decoration: underline;
     }
   
@@ -1316,7 +1263,7 @@ footer {
   \*************************************************************************************************************/
 /* Social media icons */
 
-.icons-wrapper {
+.icons--wrapper {
     /*width:           50%;*/
     height:          2rem;
     display:         flex;
