@@ -98,6 +98,6 @@
   }
   .table--container {
     width:   max(370px, 90%);
-    
+    padding: .5rem;
   } 
 }
