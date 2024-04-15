@@ -1,8 +1,9 @@
 {
     "version": 2,
     "routes": [
-        { "src": "/(.*)", "dest": "/dist/$1" } 
-    ],
+        { "src": "/dist/index.html", "dest": "/index.html" }, // Match specific request for /dist/index.html and redirect to /index.html
+        { "src": "/(.*)", "dest": "/index.html" } // Match all requests and send them to /index.html
+      ],
     "builds": [
       { "src": "/public/**", "use": "@vercel/static" },
       { "src": "/dist/**", "use": "@vercel/static" }
