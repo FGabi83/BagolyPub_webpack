@@ -20,6 +20,7 @@ function accordion() {
     }
   }
   button.addEventListener('click', function () {
+    console.log('click');
     content.classList.toggle('js-active');
     toggleText();
   });
