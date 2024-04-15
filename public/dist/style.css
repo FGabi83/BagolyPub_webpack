@@ -944,7 +944,7 @@ header {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/drinks.css ***!
   \**************************************************************************************************************/
 .drinks--background {
-  background: url('/images/photos/onebeer.jpg') no-repeat center / cover;
+  background: url('../images/photos/onebeer.jpg') no-repeat center / cover;
   margin-top: var(--header-height);
   min-height: calc(100vh - var(--header-height));
   overflow:   auto;

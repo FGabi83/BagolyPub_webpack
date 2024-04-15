@@ -74,23 +74,23 @@ const config = {
     
     new HtmlWebpackPlugin({
       template: "./views/index.pug",
-      filename: "../index.html", 
+      filename: "index.html", 
     }),
     new HtmlWebpackPlugin({
       template: "./views/drinks.pug",
-      filename: "../kinalat.html", 
+      filename: "kinalat.html", 
     }),
     new HtmlWebpackPlugin({
       template: "./views/contactPage.pug",
-      filename: "../kapcsolat.html", 
+      filename: "kapcsolat.html", 
     }),
     new HtmlWebpackPlugin({
       template: "./views/privacyPolicy.pug",
-      filename: "../adatvedelem.html", 
+      filename: "adatvedelem.html", 
     }),
     new HtmlWebpackPlugin({
       template: "./views/impressium.pug",
-      filename: "../impresszium.html", 
+      filename: "impresszium.html", 
     }),
   ],
 };

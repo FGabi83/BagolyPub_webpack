@@ -5,7 +5,7 @@ const app = express();
 
 
 // Serve static files
-/*app.use(express.static(path.join(__dirname, 'dist')));*/
+app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -23,7 +23,7 @@ app.get('/kapcsolat.html', (req, res) => {
 });
 
 app.get('/adatvedelem.html', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'dist', 'adatvedelem.html'));
+  res.sendFile(path.join(__dirname, 'public', 'dist',  'adatvedelem.html'));
 });
 
 app.get('/impresszium.html', (req, res) => {
