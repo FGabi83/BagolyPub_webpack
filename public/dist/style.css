@@ -391,10 +391,20 @@
 }
 
   
+html {
+  background-color: red;
+}
 
-  html {
+.ue-sidebar-container {
+  background-color: blue;
+}
+  
+
+   body {
+    min-width: 100%;
+    background-color: red;
     background-color: var(--secondary-color);
-  }
+   }
 
   
    
@@ -571,7 +581,7 @@ html {
     display:        flex;
     flex-flow:      column nowrap;
     min-height:     100vh;
-    width:          100vw;
+    width:          100%;
   }
   
   
@@ -589,7 +599,7 @@ html {
     align-items:     center;
     flex-grow:       1;
     gap:             1.875rem;
-    width:           100vw;
+    width:           100%;
     margin-top:      var(--header-height);
   }
 
@@ -855,7 +865,7 @@ header {
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/contacts.css ***!
   \****************************************************************************************************************/
 .content-card {
-    width:           100vw;
+    width:           100%;
     min-height:      calc(100vh - var(--header-height) - var(--footer-height));
     background:      var(--secondary-color) 0% 0% no-repeat padding-box;
     display:         grid;
@@ -1037,7 +1047,7 @@ header {
 
 @media (max-width: 900px) {
   .drinks--wrapper {
-    width:   100vw;
+    width:   100%;
     padding: 1rem .5rem 1rem .5rem;
     
   }
@@ -1052,7 +1062,7 @@ header {
 
 /* Hero picture */
 .hero {
-  width: 100vw;
+  width: 100%;
   height: 40vh;
   object-fit: cover;
 }
@@ -1064,7 +1074,7 @@ header {
   background-blend-mode: multiply;
   background-color:   rgba(var(--brand-color-rgb), .3);
   min-height:         var(--hero-height);
-  width:              100vw;
+  width:              100%;
   display:            flex;
   flex-flow:          column nowrap;
   justify-content:    center;

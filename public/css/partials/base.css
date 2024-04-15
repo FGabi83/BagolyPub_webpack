@@ -36,10 +36,20 @@
 }
 
   
+html {
+  background-color: red;
+}
 
-  html {
+.ue-sidebar-container {
+  background-color: blue;
+}
+  
+
+   body {
+    min-width: 100%;
+    background-color: red;
     background-color: var(--secondary-color);
-  }
+   }
 
   
    
