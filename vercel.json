@@ -6,7 +6,6 @@
     "builds": [
       { "src": "/public/**", "use": "@vercel/static" },
       { "src": "/dist/**", "use": "@vercel/static" }
-      
-      
+           
     ]
     }
