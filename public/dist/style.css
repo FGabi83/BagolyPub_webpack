@@ -732,7 +732,7 @@ header {
   }
 
   .nav {
-    width:           27.0625rem;
+    width:           27.0625%;
     display:         flex;
     flex-flow:       row nowrap;
     justify-content: space-evenly;
