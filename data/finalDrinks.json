@@ -23,7 +23,7 @@
 {"name":"Mosaic ale","category":"tap beer","smallPrice":890,"largePrice":1290},
 {"name":"PLNOTUČNÁ","category":"tap beer","smallPrice":790,"largePrice":1090},
 {"name":"FRANCINŮV LEŽÁK","category":"tap beer","smallPrice":590,"largePrice":790},
-{"name":"GRIMBERGEN ROUGE - 0,33 l","category":"bottled beer","smallPrice":100,"largePrice":null},
+{"name":"GRIMBERGEN ROUGE - 0,33 l","category":"bottled beer","smallPrice":1000,"largePrice":null},
 {"name":"Heineken - 0,33 l","category":"bottled beer","smallPrice":100,"largePrice":null},
 {"name":"Heineken Silver - 0,33 l","category":"bottled beer","smallPrice":100,"largePrice":null},
 {"name":"Heineken 0.0% - 0,33 l","category":"bottled beer","smallPrice":100,"largePrice":null},

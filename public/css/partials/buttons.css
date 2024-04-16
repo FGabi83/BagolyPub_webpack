@@ -42,5 +42,20 @@
       border-color: var(--secondary-color);
       color:        var(--brand-color);
     }
+
+    /* On tablet and mobile there is no hover effect */
+
+    @media (max-width: 923px) {
+      .btn__primary:hover {
+        background:   var(--brand-color) 0% 0% no-repeat padding-box;
+        border-color: var(--brand-color);
+        color:        var(--secondary-color);
+      } 
+      .btn__hollow:hover {
+        background:   transparent;
+        border-color: var(--secondary-color);
+        color:        var(--secondary-color); 
+      }
+    }
   
     

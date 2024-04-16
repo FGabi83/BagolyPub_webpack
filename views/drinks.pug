@@ -20,29 +20,31 @@ block content
           caption.subtitle.table--title Sörök
           thead.table--header
             td Csapolt Sörök
-            td Pohár 
-            td Korsó 
+            td.drinks--price Pohár 
+            td.drinks--price Korsó 
           tr.table--gap 
           each drink in tapBeers 
             tr.table--items 
               td.drinks--name= drink.name
-              td #{drink.smallPrice} Ft
-              td #{drink.largePrice} Ft
+              td.drinks--price #{drink.smallPrice} Ft
+              td.drinks--price #{drink.largePrice} Ft
           thead.table--header
             td Üveges Sörök
-            td Ár
+            td.table--gap
+            td.drinks--price Ár
           tr.table--gap 
           each drink in bottledBeers 
             tr.table--items 
               td.drinks--name= drink.name
-              td #{drink.smallPrice} Ft
+              td.table--gap
+              td.drinks--price #{drink.smallPrice} Ft
       .table--container  
         table.table
           caption.subtitle.table--title Rövid Italok
           thead.table--header
             td Gin
-            td 3 cl 
-            td 5 cl
+            td.drinks--price 3 cl 
+            td.drinks--price 5 cl
           tr.table--gap 
           each drink in gins 
             tr.table--items 
@@ -51,8 +53,8 @@ block content
               td.drinks--price #{drink.largePrice} Ft
           thead.table--header
             td Likőr
-            td 3 cl 
-            td 5 cl
+            td.drinks--price 3 cl 
+            td.drinks--price 5 cl
           tr.table--gap 
           each drink in liqueurs 
             tr.table--items 
@@ -61,8 +63,8 @@ block content
               td.drinks--price #{drink.largePrice} Ft
           thead.table--header
             td Rum
-            td 3 cl 
-            td 5 cl
+            td.drinks--price 3 cl 
+            td.drinks--price 5 cl
           tr.table--gap 
           each drink in rum 
             tr.table--items 
@@ -71,8 +73,8 @@ block content
               td.drinks--price #{drink.largePrice} Ft
           thead.table--header
             td Tequila
-            td 3 cl 
-            td 5 cl
+            td.drinks--price 3 cl 
+            td.drinks--price 5 cl
           tr.table--gap 
           each drink in tequila 
             tr.table--items 
@@ -81,8 +83,8 @@ block content
               td.drinks--price #{drink.largePrice} Ft
           thead.table--header
             td Vodka
-            td 3 cl 
-            td 5 cl
+            td.drinks--price 3 cl 
+            td.drinks--price 5 cl
           tr.table--gap
           each drink in vodka 
             tr.table--items 
@@ -91,8 +93,8 @@ block content
               td.drinks--price #{drink.largePrice} Ft
           thead.table--header
             td Whisky
-            td 3 cl 
-            td 5 cl
+            td.drinks--price 3 cl 
+            td.drinks--price 5 cl
           tr.table--gap
           each drink in whiskey 
             tr.table--items 
@@ -104,20 +106,20 @@ block content
           caption.subtitle.table--title Üditők
           thead.table--header
             td Megnevezés
-            td Ár
+            td.drinks--price Ár
           tr.table--gap 
           each drink in softDrinks 
             tr.table--items 
               td.drinks--name= drink.name
-              td #{drink.smallPrice} Ft       
+              td.drinks--price #{drink.smallPrice} Ft       
       .table--container#etel   
         table.table
           caption.subtitle.table--title Sörkorcsolyák
           thead.table--header
             td Megnevezés
-            td Ár
+            td.drinks--price Ár
           tr.table--gap 
           each dish in dishes 
             tr.table--items 
               td.drinks--name= dish.name
-              td #{dish.smallPrice} Ft       
+              td.drinks--price #{dish.smallPrice} Ft       

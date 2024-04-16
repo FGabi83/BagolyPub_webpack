@@ -10,6 +10,7 @@
        "map open-wrapper";
     padding:        5rem;
     gap:            2rem;
+    
   }
 
   .map {grid-area: map;}
@@ -67,9 +68,8 @@
     grid-template-columns: 1fr;
     grid-template-rows:    auto;
     justify-items:         center;
-    padding:               5rem 10% 5rem 10%;
-    gap:                   1.5rem;
-    /*overflow:              auto;*/
+    padding:               2rem 5% 2rem 5%;
+    
   }
 
   .contact--wrapper {
@@ -81,6 +81,12 @@
     aspect-ratio: 1/1;
     place-self:   center;
   }
+}
 
- 
+@media (max-width: 323px) {
+  .content-card {
+    padding: 2rem 5px 2rem 5px;
+    overflow-x: scroll;
+  }
+  
 }

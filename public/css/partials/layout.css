@@ -17,6 +17,9 @@
     flex-flow:      column nowrap;
     min-height:     100vh;
     width:          100%;
+    position:        relative;
+    
+    
   }
   
   
@@ -36,11 +39,18 @@
     gap:             1.875rem;
     width:           100%;
     margin-top:      var(--header-height);
+    
   }
 
   .main__vertical {
     flex-flow:      column nowrap;
     gap:            1rem;
     padding:        1rem .5rem 1rem .5rem;
+  }
+
+  @media (max-width: 923px) {
+    main {
+      gap: 0;
+    }
   }
 
