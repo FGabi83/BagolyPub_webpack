@@ -3,18 +3,23 @@ function activeNavItem() {
   let path = window.location.pathname;
   let pathArray = path.split('/');
   let currentPath = pathArray[pathArray.length - 1];
-  
   links.forEach(link => {
     let linkPath = link.getAttribute('href');
     let linkArray = linkPath.split('/');
     let linkCurrentPath = linkArray[linkArray.length - 1];
-    console.log(linkCurrentPath);
-    if (linkCurrentPath === currentPath) {
-      link.classList.add('js-nav--item__active');
+    let linkWithoutHtml = linkCurrentPath.split('.')[0];
+    if (linkCurrentPath === currentPath || linkWithoutHtml === currentPath) {
+       console.log('ok', 'linkCurrentPath:', linkCurrentPath, 'currentPath:', currentPath, 'linkWithoutHtml:', linkWithoutHtml);
+       link.classList.add('js-nav--item__active');
+       } else {
+        console.log('not ok', 'linkCurrentPath:', linkCurrentPath, 'currentPath:', currentPath, 'linkWithoutHtml:', linkWithoutHtml);
+       link.classList.remove('js-nav--item__active');
     }
+    
   });
 
   
 }
 
 export default activeNavItem;
+

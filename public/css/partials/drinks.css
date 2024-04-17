@@ -19,9 +19,10 @@
   }
 
 /*
-* 1) Dark blue separator under the table header
+* 1) Brown separator under the table header
 * 2) Making sure all names start with capital letter followed by lowercase
-* 3) Creating gap between the table header and the table items
+* 3) Creating gap between the table header and the table items, 
+*    and occasionally between the drinks name and price
 */
 
 .table--container {
@@ -48,7 +49,7 @@
       width:          100%;
       text-transform: uppercase;
       font-weight:    bold;
-      /*margin-bottom:  1rem;*/
+      
     }
      
     .table--header {
@@ -79,14 +80,14 @@
 
     
 
-      .drinks--name {
-        text-transform: lowercase; /*2*/
+      /*.drinks--name {
+        text-transform: lowercase; /*2
         
       }
 
       .drinks--name::first-letter {
-        text-transform: uppercase; /*2*/
-      }
+        text-transform: uppercase; /*2
+      }*/
 
       
 

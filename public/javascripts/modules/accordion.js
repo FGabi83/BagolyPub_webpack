@@ -11,9 +11,7 @@ function accordion() {
     }
 
     button.addEventListener('click', () => {
-      
       content.classList.toggle('js-active');
-      console.log(content);
       toggleText();
     });
 

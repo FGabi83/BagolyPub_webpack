@@ -21,7 +21,6 @@ function accordion() {
   }
   button.addEventListener('click', function () {
     content.classList.toggle('js-active');
-    console.log(content);
     toggleText();
   });
 }
@@ -46,9 +45,13 @@ function activeNavItem() {
     var linkPath = link.getAttribute('href');
     var linkArray = linkPath.split('/');
     var linkCurrentPath = linkArray[linkArray.length - 1];
-    console.log(linkCurrentPath);
-    if (linkCurrentPath === currentPath) {
+    var linkWithoutHtml = linkCurrentPath.split('.')[0];
+    if (linkCurrentPath === currentPath || linkWithoutHtml === currentPath) {
+      console.log('ok', 'linkCurrentPath:', linkCurrentPath, 'currentPath:', currentPath, 'linkWithoutHtml:', linkWithoutHtml);
       link.classList.add('js-nav--item__active');
+    } else {
+      console.log('not ok', 'linkCurrentPath:', linkCurrentPath, 'currentPath:', currentPath, 'linkWithoutHtml:', linkWithoutHtml);
+      link.classList.remove('js-nav--item__active');
     }
   });
 }
