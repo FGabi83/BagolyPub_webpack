@@ -45,6 +45,10 @@
     border-spacing:  0;
   }
 
+  .table__margin-bottom {
+    margin-bottom: 1.5rem;
+  }
+
     .table--title {
       width:          100%;
       text-transform: uppercase;

@@ -89,6 +89,7 @@ html {
       .text__dark {
         color: var(--brand-color);
       }
+     
 
       .text__bold {
         font-weight: bold;

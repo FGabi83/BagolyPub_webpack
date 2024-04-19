@@ -501,6 +501,7 @@ html {
       .text__dark {
         color: var(--brand-color);
       }
+     
 
       .text__bold {
         font-weight: bold;
@@ -1028,6 +1029,10 @@ header {
     border-spacing:  0;
   }
 
+  .table__margin-bottom {
+    margin-bottom: 1.5rem;
+  }
+
     .table--title {
       width:          100%;
       text-transform: uppercase;
@@ -1122,7 +1127,7 @@ header {
 /* Hero background */
 
 .hero--main {
-  background:  url('/images/photos/pub_interior.jpg') no-repeat center / cover; 
+  background:  url('/images/photos/kisasztal.jpg') no-repeat center / cover;
   background-blend-mode: multiply;
   background-color:   rgba(var(--brand-color-rgb), .3);
   min-height:         var(--hero-height);

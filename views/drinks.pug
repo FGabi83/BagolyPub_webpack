@@ -7,17 +7,19 @@ block content
   - const bottledBeers = drinks.filter(drink => drink.category === 'bottled beer')
   - const gins = drinks.filter(drink => drink.category === 'gin') 
   - const liqueurs = drinks.filter(drink => drink.category === 'liqueur')
+  - const extraLiqueurs = drinks.filter(drink => drink.category === 'extra liqueur')
   - const rum = drinks.filter(drink => drink.category === 'rum')
   - const tequila = drinks.filter(drink => drink.category === 'tequila')
   - const vodka = drinks.filter(drink => drink.category === 'vodka')
   - const whiskey = drinks.filter(drink => drink.category === 'whiskey')
   - const wine = drinks.filter(drink => drink.category === 'wine')
+  - const longDrinks = drinks.filter(drink => drink.category === 'long drinks')
   - const softDrinks = drinks.filter(drink => drink.category === 'soft drinks')
   - const dishes = drinks.filter(drink => drink.category === 'food')
   main.drinks--background 
     .drinks--wrapper
       .table--container
-        table.table
+        table.table.table__margin-bottom
           caption.subtitle.table--title Sörök
           thead.table--header
             td Csapolt Sörök
@@ -39,6 +41,29 @@ block content
               td.drinks--name= drink.name
               td.table--gap
               td.drinks--price #{drink.smallPrice} Ft
+        p.text__small Az aktuális csapolt sörökről a pultnál lehet érdeklődni
+      .table--container   
+        table.table
+          caption.subtitle.table--title Borok
+          thead.table--header
+            td Megnevezés
+            td.drinks--price Ár
+          tr.table--gap 
+          each drink in wine 
+            tr.table--items 
+              td.drinks--name= drink.name
+              td.drinks--price #{drink.smallPrice} Ft
+      .table--container   
+        table.table
+          caption.subtitle.table--title Üditők
+          thead.table--header
+            td Megnevezés
+            td.drinks--price Ár
+          tr.table--gap 
+          each drink in softDrinks 
+            tr.table--items 
+              td.drinks--name= drink.name
+              td.drinks--price #{drink.smallPrice} Ft    
       .table--container  
         table.table
           caption.subtitle.table--title Rövid Italok
@@ -102,30 +127,29 @@ block content
               td.drinks--name= drink.name
               td.drinks--price #{drink.smallPrice} Ft
               td.drinks--price #{drink.largePrice} Ft
-      .table--container   
-        table.table
-          caption.subtitle.table--title Borok
           thead.table--header
-            td Megnevezés
-            td.drinks--price Ár
+            td Krém & keserűlikőr
+            td.table--gap
+            td.drinks--price 8 cl 
           tr.table--gap 
-          each drink in wine 
+          each drink in extraLiqueurs 
             tr.table--items 
               td.drinks--name= drink.name
+              td.table--gap
               td.drinks--price #{drink.smallPrice} Ft
       .table--container   
         table.table
-          caption.subtitle.table--title Üditők
+          caption.subtitle.table--title Long Drinks
           thead.table--header
             td Megnevezés
             td.drinks--price Ár
           tr.table--gap 
-          each drink in softDrinks 
+          each drink in longDrinks 
             tr.table--items 
               td.drinks--name= drink.name
-              td.drinks--price #{drink.smallPrice} Ft       
+              td.drinks--price #{drink.smallPrice} Ft
       .table--container#etel   
-        table.table
+        table.table.table__margin-bottom
           caption.subtitle.table--title Sörkorcsolyák
           thead.table--header
             td Megnevezés
@@ -134,4 +158,6 @@ block content
           each dish in dishes 
             tr.table--items 
               td.drinks--name= dish.name
-              td.drinks--price #{dish.smallPrice} Ft       
+              td.drinks--price #{dish.smallPrice} Ft 
+        p Hamarosan, már dolgozunk rajta!
+         
