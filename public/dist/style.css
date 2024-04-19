@@ -1127,7 +1127,7 @@ header {
 /* Hero background */
 
 .hero--main {
-  background:  url('/images/photos/kisasztal.jpg') no-repeat center / cover;
+  background:  url('/images/photos/kisasztal.JPG') no-repeat center / cover;
   background-blend-mode: multiply;
   background-color:   rgba(var(--brand-color-rgb), .3);
   min-height:         var(--hero-height);
