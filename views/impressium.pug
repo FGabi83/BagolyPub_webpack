@@ -1,4 +1,10 @@
-extends layout 
+extends layout
+
+include mixins/_head
+
+block head 
+  title Bagoly Pubs | Impresszium
+  +head
 
 block content 
   main.main__vertical
@@ -27,10 +33,12 @@ block content
       .impressium--subwrapper      
         h2.subtitle.title__light Tárhelyszolgáltató adatai     
         p.text__dark 
-          span.text__bold Cégnév:</span> Példa Hosting Kf      
+          span.text__bold Cégnév:</span> Rackhost Zrt.      
         p.text__dark 
-          span.text__bold Cím:</span> 1105 Budapest, Vezér utca 4      
+          span.text__bold Székhely:</span> 6722 Szeged, Tisza Lajos körút 41.      
         p.text__dark 
-          span.text__bold Telefonszám:</span> +36 30 123 45      
+          span.text__bold Adószám:</span> 25333572-2-06
         p.text__dark 
-          span.text__bold E-mail:</span> host@peldahosting.hu
+          span.text__bold Cégjegyzékszám:</span> 06-10-000489
+        p.text__dark 
+          span.text__bold E-mail:</span> info@rackhost.hu

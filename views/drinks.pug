@@ -1,5 +1,11 @@
 extends layout
 
+include mixins/_head
+
+block head 
+  meta(name="description" content="Kóstold meg a Bagoly Pub exkluzív kínálatát! Válogass minőségi italaink közül, élvezd a kedvező árakat és a kellemes környezetet!")
+  title Bagoly Pub | Kínálat
+  +head
 
 block content
   - const drinks = require('../data/finalDrinks.json')

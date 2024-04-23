@@ -1,5 +1,11 @@
 extends layout 
 
+include mixins/_head
+
+block head 
+  title Bagoly Pubs | Adatvédelmi tájékoztató
+  +head
+
 block content
   main.main__vertical
     h1.title.title__center.title__light Adatvédelmi tájékoztató
@@ -9,8 +15,7 @@ block content
     ul.text__dark.text__50.privacy--list
       li Cégnév: Bagoly Pubs Kft. 
       li Székhely: 1031. Budapest, Ányos utca 4. 
-      li Telefon: [Cég Telefonszáma] 
-      li Email: [Cég Email Címe]
+      li Email: info@bagolypub.hu
     h2.subtitle.title__center.title__light Személyes adatok gyűjtése és felhasználása
     p.text__dark.text__50 Az általad megadott személyes adatokat kizárólag az alábbi célokra használjuk fel:
     ul.text__dark.text__50.privacy--list
@@ -29,10 +34,10 @@ block content
     h2.subtitle.title__center.title__light Változtatások az adatvédelmi tájékoztatón
     p.text__dark.text__50 Fenntartjuk a jogot, hogy időnként frissítsük vagy módosítsuk az adatvédelmi tájékoztatónkat. Az esetleges változtatásokról értesíteni fogunk, és frissített tájékoztatót teszünk elérhetővé a weboldalon.
     h2.subtitle.title__center.title__light Kapcsolat
-    p.text__dark.text__50 Ha bármilyen kérdésed vagy észrevételed van az adatvédelmi tájékoztatóval kapcsolatban, kérjük, lépj kapcsolatba velünk az alábbi elérhetőségek egyikén:
+    p.text__dark.text__50 Ha bármilyen kérdésed vagy észrevételed van az adatvédelmi tájékoztatóval kapcsolatban, kérjük, lépj kapcsolatba velünk az alábbi elérhetőségen:
     .privacy--contacts__wrapper
-      p.text__dark.text__50.privacy--contacts Email:  
+      p.text__dark.text__50.privacy--contacts.hide Telefon:  
         a.privacy--link(href="tel:1234567890") (123) 456-7890
-      p.text__dark.text__50.privacy--contacts Telefon: 
+      p.text__dark.text__50.privacy--contacts Email: 
         a.privacy--link(href="mailto:info@bagolypub.hu") info@bagolypub.hu
       
