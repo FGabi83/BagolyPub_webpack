@@ -1027,6 +1027,7 @@ header {
     opacity:         1;
     border-collapse: collapse; /* 1 */
     border-spacing:  0;
+   
   }
 
   .table__margin-bottom {
@@ -1066,6 +1067,12 @@ header {
       
     }
 
+
+    
+    .drinks--price {
+      width: 21.776%;
+      
+    }
     
 
       /*.drinks--name {
