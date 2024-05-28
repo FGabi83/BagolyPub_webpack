@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 
+
 const javascript = {
   test: /\.(js)$/,
   exclude: /(node_modules)/,
@@ -22,11 +23,7 @@ const postcss = {
   options: {
     postcssOptions: {
       plugins: [
-        require('autoprefixer')({
-          grid: true,
-          flexbox: true,
-          debug: true,
-        }),
+        require('autoprefixer')(),
       ],
     },
   },
@@ -49,33 +46,8 @@ const styles = {
     postcss,
   ], 
 };
-/*
-console.log("PostCSS objektum létrehozása...");
-const postcssOptions = {
-  postcssOptions: {
-    plugins: [
-      require('autoprefixer')({
-        grid: true,
-        flexbox: true,
-        debug: true,
-      }),
-    ],
-  },
-};
-console.log("PostCSS opciók:", postcssOptions);
+console.log("Stílusok konfigurálva:", styles);
 
-const styles = {
-  test: /\.(css)$/,
-  use: [
-    MiniCssExtractPlugin.loader,
-    "css-loader",
-    {
-      loader: "postcss-loader",
-      options: postcssOptions,
-    },
-  ],
-};
-console.log("Stílusok konfigurálása:", styles);*/
 
 const pug = {
   test: /\.pug$/,
@@ -117,27 +89,30 @@ const config = {
         
       ],
     }),
-    
-    
     new HtmlWebpackPlugin({
       template: "./views/index.pug",
-      filename: "../index.html", 
+      filename: "index.html",
+      inject: false, 
     }),
     new HtmlWebpackPlugin({
       template: "./views/drinks.pug",
-      filename: "../kinalat.html", 
+      filename: "kinalat.html",
+      inject: false, 
     }),
     new HtmlWebpackPlugin({
       template: "./views/contactPage.pug",
-      filename: "../kapcsolat.html", 
+      filename: "kapcsolat.html",
+      inject: false, 
     }),
     new HtmlWebpackPlugin({
       template: "./views/privacyPolicy.pug",
-      filename: "../adatvedelem.html", 
+      filename: "adatvedelem.html", 
+      inject: false,
     }),
     new HtmlWebpackPlugin({
       template: "./views/impressium.pug",
-      filename: "../impresszium.html", 
+      filename: "impresszium.html", 
+      inject: false,
     }),
   ],
 };

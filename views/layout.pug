@@ -11,12 +11,12 @@ html(lang="hu")
       block header
         header
           a.logo--wrapper(href="/")
-            img.logo(src="/images/icons/logo_dark.svg" alt="logo")  
+            img.logo(src="/images/icons/logo_dark.svg" alt="Bagoly Pub logo")  
           .js-nav--wrapper
             div
               nav.nav
                 block nav
-                  -const menu = [{ slug: '/', title: 'Kezdőlap', }, { slug: '/kinalat.html', title: 'Kínálat', }, { slug: '/kapcsolat.html', title: 'Kapcsolat', },]
+                  -const menu = [{ slug: '/', title: 'Kezdőlap', }, { slug: '/kinalat', title: 'Kínálat', }, { slug: '/kapcsolat', title: 'Kapcsolat', },]
                   each item, index in menu
                     a.js-nav--item.text__nav(href=item.slug, class=(index === menu.length - 1) ? 'nav--item__last' : '') #{item.title}
           .js-nav--menu 
@@ -27,13 +27,13 @@ html(lang="hu")
         
       footer
         .icons--wrapper
-          a(href="https://www.facebook.com/profile.php?id=61558827775371" target="_blank")
+          a(href="https://www.facebook.com/profile.php?id=61558827775371" target="_blank" aria-label="Bagoly Pub Facebook oldala")
             i.icons.icons__light.fa-brands.fa-facebook-f
-          a(href="https://www.instagram.com" target="_blank")
+          a(href="https://www.instagram.com" target="_blank" aria-label="Bagoly Pub Instagram oldala")
             i.icons.icons__light.fa-brands.fa-instagram
         .links--wrapper
-          a.footer--text__link.text__small(href="/adatvedelem.html") Adatvédelmi Tájékoztató
-          a.footer--text__link.text__small(href="/impresszium.html") Impresszum
+          a.footer--text__link.text__small(href="/adatvedelem") Adatvédelmi Tájékoztató
+          a.footer--text__link.text__small(href="/impresszium") Impresszum
         p.footer--text.text__small © 2024 Copyright Bagoly Pub
 
 

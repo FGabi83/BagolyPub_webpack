@@ -39,7 +39,6 @@
 
   @media (max-width: 635px) {
     .text__hero {
-      text-align: left;
       padding-left: 10%;
       padding-right: 10%;
     }

@@ -14,19 +14,19 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'index.html'));
 });
 
-app.get('/kinalat.html', (req, res) => {
+app.get('/kinalat', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'kinalat.html'));
 });
 
-app.get('/kapcsolat.html', (req, res) => {
+app.get('/kapcsolat', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'kapcsolat.html'));
 });
 
-app.get('/adatvedelem.html', (req, res) => {
+app.get('/adatvedelem', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist',  'adatvedelem.html'));
 });
 
-app.get('/impresszium.html', (req, res) => {
+app.get('/impresszium', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'impresszium.html'));
 });
 

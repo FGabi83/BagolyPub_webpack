@@ -9,7 +9,7 @@ block head
 
 block content
   - const drinks = require('../data/finalDrinks.json')
-  - const tapBeers = drinks.filter(drink => drink.category === 'tap beer')
+  - const tapBeers = drinks.filter(drink => drink.category === 'tap beer' ).sort((a, b) => a.order - b.order)
   - const bottledBeers = drinks.filter(drink => drink.category === 'bottled beer')
   - const gins = drinks.filter(drink => drink.category === 'gin') 
   - const liqueurs = drinks.filter(drink => drink.category === 'liqueur')
@@ -21,6 +21,7 @@ block content
   - const wine = drinks.filter(drink => drink.category === 'wine')
   - const longDrinks = drinks.filter(drink => drink.category === 'long drinks')
   - const softDrinks = drinks.filter(drink => drink.category === 'soft drinks')
+  - const palinka = drinks.filter(drink => drink.category === 'palinka')
   - const dishes = drinks.filter(drink => drink.category === 'food')
   main.drinks--background 
     .drinks--wrapper
@@ -28,6 +29,8 @@ block content
         table.table
           caption.subtitle.table--title Sörök
           thead.table--header
+            tr
+              td.text__small.title__light(colspan="3") Az aktuális csapolt sörökről a pultnál lehet érdeklődni
             tr
               td Csapolt Sörök
               td.drinks--price Pohár 
@@ -37,11 +40,12 @@ block content
               td 
               td 
               td
-            each drink in tapBeers 
-              tr.table--items 
-                td.drinks--name= drink.name
-                td.drinks--price #{drink.smallPrice} Ft
-                td.drinks--price #{drink.largePrice} Ft
+            each drink in tapBeers
+              if drink.onTap === true
+                tr.table--items 
+                  td.drinks--name= drink.name
+                  td.drinks--price #{drink.smallPrice} Ft
+                  td.drinks--price #{drink.largePrice} Ft
         table.table.table__margin-bottom
           thead.table--header
             tr
@@ -58,7 +62,6 @@ block content
                 td.drinks--name= drink.name
                 td.table--gap
                 td.drinks--price #{drink.smallPrice} Ft
-        p.text__small Az aktuális csapolt sörökről a pultnál lehet érdeklődni
       .table--container   
         table.table
           caption.subtitle.table--title Borok
@@ -183,6 +186,22 @@ block content
               td 
               td
             each drink in whiskey 
+              tr.table--items 
+                td.drinks--name= drink.name
+                td.drinks--price #{drink.smallPrice} Ft
+                td.drinks--price #{drink.largePrice} Ft
+        table.table
+          thead.table--header
+            tr
+              td Pálinka
+              td.drinks--price 3 cl 
+              td.drinks--price 5 cl
+          tbody
+            tr.table--gap
+              td 
+              td 
+              td
+            each drink in palinka 
               tr.table--items 
                 td.drinks--name= drink.name
                 td.drinks--price #{drink.smallPrice} Ft
