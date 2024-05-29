@@ -1070,7 +1070,7 @@ header {
 
     
     .drinks--price {
-      width: 21.776%;
+      width: 21%;
       text-align: right;
       
     }
@@ -1095,7 +1095,13 @@ header {
   .drinks--price {
     white-space:  nowrap;
     height:       25px;
-    padding-left: 5px;
+    padding-left: 2px;
+    
+  }
+
+  .drinks--price.right-col {
+    padding-left: 9px;
+    
   }
   
 }
