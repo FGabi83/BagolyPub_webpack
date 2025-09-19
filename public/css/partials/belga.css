@@ -1,0 +1,250 @@
+.belga {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  flex-flow: column nowrap;
+  width: 100%;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .belga-headline {
+    margin: 2rem;
+    width: 75vw;
+  }
+
+    .list-title {
+      text-transform: uppercase ;
+  
+    }
+
+    .list-subtitle {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 400;
+      font-size: var(--font-size-small);
+      line-height: var(--line-height-small);
+      align-self: flex-start;
+    }
+
+  .list-item_name {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: var(--line-height-regular);
+    color: var(--brand-color);
+  }
+
+  .list-subname-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    
+  }
+
+  .list-item_subname {
+    font-size : var(--font-size-small);
+    line-height: var(--line-height-small);
+    align-self: center;
+  }
+
+  .list-toggle {
+    padding-top: .5rem;
+  }
+  
+      
+
+
+
+.list-content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  width: 75vw;
+  
+  
+}
+
+ 
+
+  
+
+  .list-item_content {
+    display: none;
+  }
+
+  /*TOGGLE CSS*/
+
+  .visible-content {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .list-item_image {
+    width: 20%;
+    height: auto;
+  }
+
+  .hidden {
+    display: none;
+  } 
+
+
+
+/* DEATILED VIEW*/
+
+.selectedItem {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  
+  margin-top: 2rem;
+}
+
+.selectedItem > .list-header  {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+  
+}
+
+.list-item_image {
+  width: 28vw;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.selectedItem .list-subname-wrapper {
+  justify-content: center;
+}
+.selectedItem .list-item_subname {
+ 
+  text-align: center;
+}
+
+.list-item_text {
+  font-size : calc(var(--font-size-regular) * 0.75);
+  line-height: calc(var(--line-height-regular) * 0.75);
+  color: var(--brand-color);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  
+}
+
+.btn__back {
+  background:   transparent;
+  border-color: var(--brand-color);
+  color:        var(--brand-color);
+  width: 5.25rem;
+  width: auto;
+  height: 2rem;
+  border:       1px solid;
+  font-weight:  400;
+  letter-spacing: normal;
+  margin-right: 0;
+  margin-left: auto;
+  margin-top: 2rem;
+
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*-----------------------------------------------*/
+/* DESKTOP VIEW */
+/*-----------------------------------------------*/
+@media (min-width: 1024px) {
+  .belga-headline {
+    width: unset;
+    margin-top: calc(var(--header-height) + 2rem);
+  }
+  .list-subtitle {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: var(--font-size-regular);
+    line-height: var(--line-height-regular);
+  } 
+  .list-content {
+    width: auto;
+    gap: 2rem;
+    
+  }
+  .list-item {
+    max-width: 300px;
+  }
+  .list-item:hover {
+   
+   box-shadow: 0px 3px 6px #00000029;
+   padding: .5rem;
+   transition: 0.3s; 
+  }
+  .list-item_name {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+  }
+  .list-item_subname {
+    font-size : var(--font-size-regular);
+    line-height: var(--line-height-regular);
+    width: 90%;
+    
+  }
+  .list-toggle {
+    padding-top: unset;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  /* DEATILED VIEW*/
+  .selectedItem{
+    max-width: 674px;
+  }
+  .selectedItem:hover {
+    box-shadow: none;
+    padding: 0;
+    transition: none; 
+   }
+  .selectedItem > .list-header {
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+  .selectedItem .list-item_subname {
+    width: unset;
+  }
+
+  .selectedItem > .list-item_content {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+    width: 100%;
+  }
+  .selectedItem .list-item_description {
+    align-self:last baseline;
+  }
+  .list-item_image {
+    width: auto;
+    height: 12rem;
+    margin-left: 0;
+    margin-right: 0;
+    
+  }
+  .list-item_text {
+    max-width: 21.875rem;
+    max-width: 20rem;
+  }
+  .btn__back:hover {
+    cursor: pointer;
+    background:   var(--brand-color);
+    border-color: var(--brand-color);
+    color:        var(--secondary-color);
+  }
+  
+  
+}

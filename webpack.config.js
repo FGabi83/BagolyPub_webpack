@@ -105,13 +105,18 @@ const config = {
       inject: false, 
     }),
     new HtmlWebpackPlugin({
+      template: "./views/belga.pug",
+      filename: "belga.html", 
+      inject: false,
+    }),
+    new HtmlWebpackPlugin({
       template: "./views/privacyPolicy.pug",
       filename: "adatvedelem.html", 
       inject: false,
     }),
     new HtmlWebpackPlugin({
-      template: "./views/impressium.pug",
-      filename: "impresszium.html", 
+      template: "./views/impressum.pug",
+      filename: "impresszum.html", 
       inject: false,
     }),
   ],

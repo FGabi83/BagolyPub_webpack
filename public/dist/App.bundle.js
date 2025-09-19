@@ -69,12 +69,78 @@ __webpack_require__.r(__webpack_exports__);
 function dropdownMenu() {
   var navMenu = document.querySelector(".js-nav--menu");
   var navWrapper = document.querySelector(".js-nav--wrapper");
+  var navLinks = document.querySelectorAll(".js-nav--item");
   navMenu.addEventListener("click", function () {
     navWrapper.classList.toggle("js-is-open");
     navMenu.classList.toggle("js-highlight");
   });
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      navWrapper.classList.remove("js-is-open");
+      navMenu.classList.remove("js-highlight");
+    });
+  });
 }
 /* harmony default export */ __webpack_exports__["default"] = (dropdownMenu);
+
+/***/ }),
+
+/***/ "./public/javascripts/modules/showDetails.js":
+/*!***************************************************!*\
+  !*** ./public/javascripts/modules/showDetails.js ***!
+  \***************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+function showDetails() {
+  var items = document.querySelectorAll(".js-item");
+  var headers = document.querySelectorAll(".js-header");
+  var headline = document.querySelector(".js-headline");
+  headers.forEach(function (header) {
+    header.addEventListener("click", function () {
+      var selectedItem = this.parentElement;
+      var icon = this.querySelector(".js-list-toggle");
+      var content = this.nextElementSibling;
+      items.forEach(function (item) {
+        if (item !== selectedItem) {
+          item.classList.add("hidden");
+        } else {
+          item.classList.add("selectedItem");
+        }
+      });
+      // Make the selected content visible
+      content.classList.add("visible-content");
+
+      // Hide the arow icon
+      icon.classList.add("hidden");
+      //Hide headline
+      headline.classList.add("hidden");
+    });
+  });
+  var backButtons = document.querySelectorAll(".js-back-button");
+  backButtons.forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.stopPropagation(); // ne triggerelje a szülő click-et
+
+      //Show all hidden items
+      items.forEach(function (item) {
+        item.classList.remove("hidden");
+        item.classList.remove("selectedItem");
+      });
+      var allContents = document.querySelectorAll(".js-content");
+      var allIcons = document.querySelectorAll(".js-list-toggle");
+      allContents.forEach(function (content) {
+        return content.classList.remove("visible-content");
+      });
+      allIcons.forEach(function (icon) {
+        return icon.classList.remove("hidden");
+      });
+      headline.classList.remove("hidden");
+    });
+  });
+}
+;
+/* harmony default export */ __webpack_exports__["default"] = (showDetails);
 
 /***/ }),
 
@@ -139,15 +205,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.css */ "./public/css/style.css");
 /* harmony import */ var _modules_dropdownMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dropdownMenu */ "./public/javascripts/modules/dropdownMenu.js");
 /* harmony import */ var _modules_activeNavItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/activeNavItem */ "./public/javascripts/modules/activeNavItem.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/accordion */ "./public/javascripts/modules/accordion.js");
+/* harmony import */ var _modules_showDetails__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/showDetails */ "./public/javascripts/modules/showDetails.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordion */ "./public/javascripts/modules/accordion.js");
  // without this import webpack doesn't generate the css file
+
 
 
 
 
 (0,_modules_dropdownMenu__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_modules_activeNavItem__WEBPACK_IMPORTED_MODULE_2__["default"])();
-(0,_modules_accordion__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_modules_showDetails__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["default"])();
 }();
 /******/ })()
 ;

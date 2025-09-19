@@ -1,11 +1,17 @@
 mixin contact()
   .content-card
-    iframe.map(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.9649439410414!2d19.04688831226993!3d47.56847049048922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d99a3619ea3b%3A0x3dd714e548e05fb9!2zQnVkYXBlc3QsIFLDs21haSB0w6lyIDIsIDEwMzE!5e0!3m2!1shu!2shu!4v1710161436010!5m2!1shu!2shu" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bagoly Pub térkép")
+    iframe.map(
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.9649439410414!2d19.04688831226993!3d47.56847049048922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741d99a3619ea3b%3A0x3dd714e548e05fb9!2zQnVkYXBlc3QsIFLDs21haSB0w6lyIDIsIDEwMzE!5e0!3m2!1shu!2shu!4v1710161436010!5m2!1shu!2shu"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Bagoly Pub térkép"
+    )
     .contact--wrapper
       h2.highlighted-text.title Elérhetőségek
       p 1031 Budapest, Római tér 2.
       p
-        a.highlighted-text.email(href="mailto:info@bagolypub.hu") info@bagolypub.hu
+        span#email.highlighted-text.email
       .icons--wrapper
         a(href="https://www.facebook.com/profile.php?id=61558827775371" target="_blank" aria-label="Bagoly Pub Facebook oldala")
           i.icons.fa-brands.fa-facebook-f
@@ -17,6 +23,17 @@ mixin contact()
         each time in ['Hétfőtől - Csütörtökig: 16:00 - 23:00', 'Péntektől - Szombatig: 16:00 - 01:00', 'Vasárnap: 16:00 - 23:00']
           = time
           br
+
+  script.
+    document.addEventListener("DOMContentLoaded", function () {
+      const email = "info" + "@" + "bagolypub.hu";
+      const el = document.getElementById("email");
+      if (el) {
+        el.innerHTML = '<a href="mailto:' + email + '" class="highlighted-text email">' + email + '</a>';
+      }
+    });
+
+
 
 
     

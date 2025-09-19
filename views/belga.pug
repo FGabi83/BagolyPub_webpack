@@ -1,0 +1,31 @@
+extends layout
+
+include mixins/_head
+
+block head 
+  meta(name="description" content="Ismerd meg belga sör kínálatunkat! ")
+  title Bagoly Pub | Belga sör kínálat
+  +head
+
+block content
+  - const list = require('../data/belga.json')
+  main.belga
+    .belga-headline.js-headline
+      h1.title.text__brand.list-title Belga sörkínálatunk
+      h2.list-subtitle Részletes leírásért kattints a sörre
+    .list-content
+      each item in list
+        .list-item.js-item
+          .list-header.js-header
+            p.list-item_name #{item.name}
+            .list-subname-wrapper 
+              p.list-item_subname #{item.subname} 
+              span.list-toggle.js-list-toggle
+                svg(class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round")
+                  path(d="M4 8H11")       
+                  path(d="M8 5L11 8L8 11") 
+          .list-item_content.js-content
+            img.list-item_image(src=`/images/photos/${item.image}` alt=`${item.name}`) 
+            .list-item_description
+              p.list-item_text #{item.description}
+              button.btn.btn__back.js-back-button(type="button" aria-label="Részlet bezárása") Vissza

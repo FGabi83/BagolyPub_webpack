@@ -12,7 +12,7 @@
     <link href="/fontawesome/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="/dist/style.css">
     <link rel="preload" fetchpriority="high" as="image" href="/images/photos/kisasztal.JPG" type="image/jpeg">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&amp;family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&amp;family=Jost:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/images/icons/logo_light.png">
   </head>
   <body>
@@ -42,7 +42,6 @@
                 <li>könnyed, laza de mégis patent design</li>
                 <li>elsőrendű italkínálat (csekkold itt:   <a class="accordion--link" href="/kinalat">Itallap</a>)</a></li>
                 <li>nem halsz éhen, íme az éléskamra ( csekkold itt: <a class="accordion--link" href="/kinalat#etel">Sörkorcsolyák</a>)</a></li>
-                <li>Bagoly könyvtár ( olvashatsz, könyvjelzőt is kapsz )</li>
                 <li>dolgozhatsz ( van wifi, de inkább beszélgessetek )</li>
                 <li>van társasjáték, kártya, gyertek hozzánk a haverokkal játszani</li>
                 <li>zene ( minden mennyiségben )</li>
@@ -56,7 +55,7 @@
           <div class="contact--wrapper">
             <h2 class="highlighted-text title">Elérhetőségek</h2>
             <p>1031 Budapest, Római tér 2.</p>
-            <p><a class="highlighted-text email" href="mailto:info@bagolypub.hu">info@bagolypub.hu</a></p>
+            <p><span class="highlighted-text email" id="email"></span></p>
             <div class="icons--wrapper"><a href="https://www.facebook.com/profile.php?id=61558827775371" target="_blank" aria-label="Bagoly Pub Facebook oldala"><i class="icons fa-brands fa-facebook-f"></i></a><a href="https://www.instagram.com" target="_blank" aria-label="Bagoly Pub Instagram oldala"><i class="icons fa-brands fa-instagram"></i></a></div>
           </div>
           <div class="open--wrapper">
@@ -65,10 +64,25 @@
             </p>
           </div>
         </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const email = "info" + "@" + "bagolypub.hu";
+            const el = document.getElementById("email");
+            if (el) {
+              el.innerHTML = '<a href="mailto:' + email + '" class="highlighted-text email">' + email + '</a>';
+            }
+          });
+          
+          
+          
+          
+          
+            
+        </script>
       </main>
       <footer>
         <div class="icons--wrapper"><a href="https://www.facebook.com/profile.php?id=61558827775371" target="_blank" aria-label="Bagoly Pub Facebook oldala"><i class="icons icons__light fa-brands fa-facebook-f"></i></a><a href="https://www.instagram.com" target="_blank" aria-label="Bagoly Pub Instagram oldala"><i class="icons icons__light fa-brands fa-instagram"></i></a></div>
-        <div class="links--wrapper"><a class="footer--text__link text__small" href="/adatvedelem">Adatvédelmi Tájékoztató</a><a class="footer--text__link text__small" href="/impresszium">Impresszum</a></div>
+        <div class="links--wrapper"><a class="footer--text__link text__small" href="/adatvedelem">Adatvédelmi Tájékoztató</a><a class="footer--text__link text__small" href="/impresszum">Impresszum</a></div>
         <p class="footer--text text__small">© 2024 Copyright Bagoly Pub</p>
       </footer>
     </div>
