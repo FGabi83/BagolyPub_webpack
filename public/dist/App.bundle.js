@@ -115,6 +115,13 @@ function showDetails() {
       icon.classList.add("hidden");
       //Hide headline
       headline.classList.add("hidden");
+      var siteHeader = document.querySelector("header");
+      var headerHeight = siteHeader ? siteHeader.offsetHeight : 80; // fallback 80px
+      var elementTop = selectedItem.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+      window.scrollTo({
+        top: elementTop,
+        behavior: "smooth"
+      });
     });
   });
   var backButtons = document.querySelectorAll(".js-back-button");
