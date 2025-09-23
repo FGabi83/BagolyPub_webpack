@@ -143,6 +143,13 @@ function showDetails() {
         return icon.classList.remove("hidden");
       });
       headline.classList.remove("hidden");
+      var siteHeader = document.querySelector("header");
+      var headerHeight = siteHeader ? siteHeader.offsetHeight : 80;
+      var elementTop = headline.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+      window.scrollTo({
+        top: elementTop,
+        behavior: "smooth"
+      });
     });
   });
 }

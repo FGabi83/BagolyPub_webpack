@@ -1392,8 +1392,8 @@ header {
 }
 
 .list-item_text {
-  font-size : calc(var(--font-size-regular) * 0.75);
-  line-height: calc(var(--line-height-regular) * 0.75);
+  font-size : calc(var(--font-size-regular) * 0.9);
+  line-height: calc(var(--line-height-regular) * 0.9);
   color: var(--brand-color);
   width: 90%;
   margin-left: auto;
@@ -1489,18 +1489,19 @@ header {
     width: 100%;
   }
   .selectedItem .list-item_description {
-    align-self:last baseline;
+    align-self: flex-end;
   }
   .list-item_image {
     width: auto;
     height: 12rem;
     margin-left: 0;
     margin-right: 0;
-    
+   
   }
   .list-item_text {
     max-width: 21.875rem;
     max-width: 20rem;
+    margin-top: auto;
   }
   .btn__back:hover {
     cursor: pointer;
