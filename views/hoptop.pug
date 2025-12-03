@@ -1,0 +1,41 @@
+extends layout
+
+include mixins/_head
+
+block head 
+  meta(name="description" content="Különleges téli sörválogatás a HopTop-tól!")
+  title Bagoly Pub | Téli Sörválogatás
+  +head
+
+block content
+  - const products = require('../data/hoptop.json')
+  .specials-hero 
+    h1.h-title Téli Sörválogatás
+    .h-images 
+      img.img-left(src="/images/photos/Midnight-Express.png" alt="Hoptop Midnight Express")
+      img.img-center(src="/images/photos/ceylon-buddy.png" alt="Hoptop Ceylon Buddy")
+      img.img-right(src="/images/photos/Pistachio.png" alt="Hoptopn Pistachio Cottage Rudolph") 
+    .h-content 
+      p.h-name HopTop 6-pack 8.300 Ft
+      p.h-text 6 sör, 3 íz, 2–2 duplán. Télen alap. 
+      p.h-text Ajándéknak tökéletes, magadnak még jobb.
+    p.h-more Választható egyenként is!
+    .down-arrow.js-scroll-to-products
+      svg(width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+        path(d="M12 4V20M12 20L5 13M12 20L19 13" stroke="#FEEECA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+  .products.js-products 
+    each product in products
+      .product-card
+        .product-header
+          .p-header-text-wrapper
+            p.p-name #{product.name}
+            p.p-type #{product.type}
+          img.p-image(src=`/images/photos/${product.img}` alt=`${product.name}`)
+        .product-info
+          p.p-desc #{product.description}
+          p.p-price #{product.price} Ft 
+  p.CTA Kérd a pultnál!
+
+
+      
+

@@ -110,6 +110,11 @@ const config = {
       inject: false,
     }),
     new HtmlWebpackPlugin({
+      template: "./views/hoptop.pug",
+      filename: "hoptop.html", 
+      inject: false,
+    }),
+    new HtmlWebpackPlugin({
       template: "./views/privacyPolicy.pug",
       filename: "adatvedelem.html", 
       inject: false,

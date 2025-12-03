@@ -26,6 +26,10 @@ app.get('/belga', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist', 'belga.html'));
 });
 
+app.get('/specials', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'dist', 'hoptop.html'));
+});
+
 app.get('/adatvedelem', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'dist',  'adatvedelem.html'));
 });

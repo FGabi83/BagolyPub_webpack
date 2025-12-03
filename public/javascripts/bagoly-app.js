@@ -4,11 +4,13 @@ import dropdownMenu from './modules/dropdownMenu';
 import activeNavItem from './modules/activeNavItem';
 
 import showDetails from './modules/showDetails';
+import scrollToProducts from './modules/scrollToProducts';
 import accordion from './modules/accordion';
 
 
 dropdownMenu();
 activeNavItem();
 showDetails();
+scrollToProducts();
 accordion();
 

@@ -1512,6 +1512,271 @@ header {
   
   
 }
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/hoptop.css ***!
+  \**************************************************************************************************************/
+/*-----MOBILE FIRST STYLES ------*/
+
+/*HERO SECTION*/
+
+
+.specials-hero {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+  background-color: var(--brand-color);
+  
+}
+
+  .h-title {
+    color: var(--tertiary-color);
+    text-align: center;
+    font-size: calc(var(--font-size-regular) * 2);
+    line-height: calc(var(--line-height-regular) * 2);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 5vh;
+  }
+
+  .h-images {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+    .h-images img {
+      width:  32vw;
+      max-width: 267px;
+      height: auto;
+      filter: drop-shadow(0px 10px 10px var(--tertiary-color)); ;
+      position: relative;
+      z-index: 1;
+    }
+      .img-center {
+        z-index: 3;
+        margin: 0 -20px;        /* közelebb húzás a többiekhez */
+      }
+      .img-left {
+        transform: rotate(-5deg);
+        margin-right: -20px;    /* átfedés */
+        z-index: 2; 
+      }
+
+      .img-right {
+        transform: rotate(5deg);
+        margin-left: -20px;     /* átfedés */
+        z-index: 2;
+      }
+
+
+    .h-content {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2rem;
+      color: var(--tertiary-color);
+      text-align: center;
+      width: 52vw;
+    }
+      .h-name {
+        font-size : calc(var(--font-size-regular) * 1.5);
+        line-height: calc(var(--line-height-regular) * 1.4);
+      }
+
+    .h-more {
+      font-size: var(--font-size-medium);
+      line-height: var(--line-height-medium);
+      text-align: center;
+      margin-top: auto;
+      font-weight: 500;
+    }
+
+.down-arrow {
+  margin-top: .5rem;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.down-arrow svg {
+  width: 24px;
+  height: 32px;
+}
+
+
+
+/*PRODUCTS SECTION*/
+
+
+.products {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 77vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  
+}
+
+  .product-card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    color: var(--brand-color);
+  }
+
+    .product-header {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      
+    }
+
+    .p-name {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: var(--font-size-medium);
+      
+     
+    }
+
+    .p-type {
+      color: var(--primary-color);
+      font-size: calc(var(--font-size-regular) * 0.9);
+    }
+
+    .p-image {
+      width: 50vw;
+      max-width: 296px;
+      filter: drop-shadow(0px 8px 10px var(--primary-color));
+      margin-bottom: 1rem;
+    }
+
+    .product-info {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-end;
+      gap: 1rem;
+    }
+
+      .p-desc {
+        font-size: calc(var(--font-size-regular) * 0.9);
+        line-height: calc(var(--line-height-regular) * 0.9);
+      }
+
+      .p-price {
+        color: var(--primary-color);
+      }  
+      
+      
+  
+  .CTA {
+    color: var(--brand-color);
+    font-size: var(--font-size-big);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+
+
+
+
+/*-----DESKTOP STYLES ------*/
+
+/*HERO SECTION*/
+
+@media (min-width: 1024px) {
+  .h-title {
+    margin-top: 13vh;
+    margin-bottom: 0;
+    font-size: 5rem;
+  } 
+  
+  .img-center {
+    margin: 0 -40px;        /* közelebb húzás a többiekhez */
+      }
+  .img-left {
+    margin-right: -40px;    /* átfedés */
+  }
+  .img-right {
+    margin-left: -40px;     /* átfedés */
+  }
+  .h-content {
+    margin-top: 4vh;
+  }
+  .h-name {
+    font-size : 2.625rem;
+    line-height: 4rem;
+  }
+  .h-more {
+    font-size: 2.18rem;
+    font-weight: 400;
+  }
+  .down-arrow svg {
+  width: 48px;
+  height: 64px;
+}
+}
+
+/*PRODUCTS SECTION*/
+@media (min-width: 1024px) {
+  .products {
+    gap: 5rem;
+    margin-top: 7vh;
+    
+  }
+  .product-card {
+    flex-direction: row;
+    width: 80vw;
+    max-width: 688px;
+  }
+  .products .product-card:nth-child(2) {
+  flex-direction: row-reverse;
+  
+  } 
+  
+  .p-name {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+  .p-type {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .p-image {
+    margin-bottom: 2rem;
+  }
+  .product-info {
+   margin-top: 4rem; 
+   gap: 3rem;
+  }
+  
+  .p-desc {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    
+  }
+  .p-price {
+    font-size: 1.5rem;
+  }
+  .CTA {
+    font-size: 3.75rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+}
 /*!***************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./public/css/partials/privacy.css ***!
   \***************************************************************************************************************/

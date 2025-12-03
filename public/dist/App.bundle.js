@@ -85,6 +85,56 @@ function dropdownMenu() {
 
 /***/ }),
 
+/***/ "./public/javascripts/modules/scrollToProducts.js":
+/*!********************************************************!*\
+  !*** ./public/javascripts/modules/scrollToProducts.js ***!
+  \********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/*function scrollToProducts() {
+  const  arrow = document.querySelector('.js-scroll-to-products');
+  const productsSection = document.querySelector('.js-products');
+  const siteHeader = document.querySelector("header");
+  
+  arrow.addEventListener('click', function (e) {
+    e.preventDefault();
+    const headerHeight = siteHeader.offsetHeight;
+    const productsTop = productsSection.offsetTop;
+    window.scrollTo({
+      top: productsTop - headerHeight,
+      behavior: 'smooth'
+    });
+  });
+};
+  
+
+
+
+export default scrollToProducts;*/
+
+function scrollToProducts() {
+  var arrow = document.querySelector('.js-scroll-to-products');
+  var productsSection = document.querySelector('.js-products');
+  var siteHeader = document.querySelector("header");
+  arrow.addEventListener('click', function (e) {
+    e.preventDefault();
+    var headerHeight = siteHeader.offsetHeight;
+
+    // pontos pozíció margin-nal együtt:
+    var productsTop = productsSection.getBoundingClientRect().top + window.scrollY;
+    var style = window.getComputedStyle(productsSection);
+    var marginTop = parseInt(style.marginTop) || 0;
+    window.scrollTo({
+      top: productsTop - headerHeight - marginTop,
+      behavior: 'smooth'
+    });
+  });
+}
+/* harmony default export */ __webpack_exports__["default"] = (scrollToProducts);
+
+/***/ }),
+
 /***/ "./public/javascripts/modules/showDetails.js":
 /*!***************************************************!*\
   !*** ./public/javascripts/modules/showDetails.js ***!
@@ -220,8 +270,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_dropdownMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dropdownMenu */ "./public/javascripts/modules/dropdownMenu.js");
 /* harmony import */ var _modules_activeNavItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/activeNavItem */ "./public/javascripts/modules/activeNavItem.js");
 /* harmony import */ var _modules_showDetails__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/showDetails */ "./public/javascripts/modules/showDetails.js");
-/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordion */ "./public/javascripts/modules/accordion.js");
+/* harmony import */ var _modules_scrollToProducts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/scrollToProducts */ "./public/javascripts/modules/scrollToProducts.js");
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/accordion */ "./public/javascripts/modules/accordion.js");
  // without this import webpack doesn't generate the css file
+
 
 
 
@@ -230,7 +282,8 @@ __webpack_require__.r(__webpack_exports__);
 (0,_modules_dropdownMenu__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_modules_activeNavItem__WEBPACK_IMPORTED_MODULE_2__["default"])();
 (0,_modules_showDetails__WEBPACK_IMPORTED_MODULE_3__["default"])();
-(0,_modules_accordion__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_modules_scrollToProducts__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_modules_accordion__WEBPACK_IMPORTED_MODULE_5__["default"])();
 }();
 /******/ })()
 ;
