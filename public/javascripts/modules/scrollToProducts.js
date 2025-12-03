@@ -24,6 +24,9 @@ function scrollToProducts() {
   const productsSection = document.querySelector('.js-products');
   const siteHeader = document.querySelector("header");
 
+  // Ha nincs arrow vagy productsSection, akkor ne fusson tovább
+  if (!arrow || !productsSection || !siteHeader) return;
+
   arrow.addEventListener('click', function (e) {
     e.preventDefault();
     const headerHeight = siteHeader.offsetHeight;

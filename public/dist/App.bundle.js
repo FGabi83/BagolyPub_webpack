@@ -117,6 +117,9 @@ function scrollToProducts() {
   var arrow = document.querySelector('.js-scroll-to-products');
   var productsSection = document.querySelector('.js-products');
   var siteHeader = document.querySelector("header");
+
+  // Ha nincs arrow vagy productsSection, akkor ne fusson tovább
+  if (!arrow || !productsSection || !siteHeader) return;
   arrow.addEventListener('click', function (e) {
     e.preventDefault();
     var headerHeight = siteHeader.offsetHeight;
