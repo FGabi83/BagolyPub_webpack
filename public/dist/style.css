@@ -1004,6 +1004,12 @@ header {
     padding:         5% 10% 5% 10%;
   }
 
+    .drinks--wrapper p {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
 /*
 * 1) Brown separator under the table header
 * 2) Making sure all names start with capital letter followed by lowercase
@@ -1526,6 +1532,7 @@ header {
   justify-content: center;
   margin-top: var(--header-height);
   min-height: calc(100vh - var(--header-height));
+  
   background-color: var(--brand-color);
   
 }
