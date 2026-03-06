@@ -9,31 +9,50 @@ block head
 
 block content
   - const products = require('../data/hoptop.json')
+  - const newProducts = products.filter(p => p.status === 'new')
+  - const oldProducts = products.filter(p => p.status === 'old')
   .specials-hero 
-    h1.h-title Téli Sörválogatás
-    .h-images 
-      img.img-left(src="/images/photos/Midnight-Express.png" alt="Hoptop Midnight Express")
-      img.img-center(src="/images/photos/ceylon-buddy.png" alt="Hoptop Ceylon Buddy")
-      img.img-right(src="/images/photos/Pistachio.png" alt="Hoptopn Pistachio Cottage Rudolph") 
+    .hero-sun-wrapper 
+      svg.hero-sun(width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg")
+        circle(cx="75" cy="75" r="75" fill="white")  
+    h1.h-title Napfény a Pohárban
     .h-content 
-      p.h-name HopTop 6-pack 8.300 Ft
-      p.h-text 6 sör, 3 íz, 2–2 duplán. Télen alap. 
-      p.h-text Ajándéknak tökéletes, magadnak még jobb.
-    p.h-more Választható egyenként is!
+      p.h-text Friss HopTop főzetek és visszatérő különlegességek a Bagolyban.<br> Nézd meg, mi érkezett – aztán szólj a pultnál. 
+    p.h-more Újdonságok megtekintése
     .down-arrow.js-scroll-to-products
       svg(width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
-        path(d="M12 4V20M12 20L5 13M12 20L19 13" stroke="#FEEECA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-  .products.js-products 
-    each product in products
-      .product-card
-        .product-header
-          .p-header-text-wrapper
-            p.p-name #{product.name}
-            p.p-type #{product.type}
-          img.p-image(src=`/images/photos/${product.img}` alt=`${product.name}`)
-        .product-info
-          p.p-desc #{product.description}
-          p.p-price #{product.price} Ft 
+        path(d="M12 4V20M12 20L5 13M12 20L19 13" stroke="#BC956C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
+  .products-container.js-products
+    h2.products-title Most érkezett 
+    .products
+      each product in newProducts
+        .product-card
+          .product-header
+            .p-header-text-wrapper
+              p.p-name #{product.name}
+              p.p-type #{product.type}
+            img.p-image(src=`/images/photos/${product.img}` alt=`${product.name}`)
+          .product-info
+            p.p-desc #{product.description}
+            p.p-price #{product.price} Ft
+  .products-container 
+    h2.products-title Még velünk vannak
+    .products
+      each product in oldProducts
+        .product-card
+          .product-header
+            .p-header-text-wrapper
+              p.p-name #{product.name}
+              p.p-type #{product.type}
+            img.p-image(src=`/images/photos/${product.img}` alt=`${product.name}`)
+          .product-info
+            p.p-desc #{product.description}
+            p.p-price #{product.price} Ft
+  .six-pack 
+    h2.products-title Nem tudsz dönteni?
+    p Vigyél haza 4 vagy 6 sört - adunk hozzá egy tartót ajándékba.
+    
+     
   p.CTA Kérd a pultnál!
 
 

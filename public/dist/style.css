@@ -1531,71 +1531,54 @@ header {
   flex-flow: column nowrap;
   justify-content: center;
   margin-top: var(--header-height);
-  min-height: calc(100vh - var(--header-height));
-  
-  background-color: var(--brand-color);
+  /*min-height: calc(100vh - var(--header-height));*/
+  background-color: #ffffff; /* fallback */
+  background-color: rgba(var(--tertiary-color-rgb), 0.2);
+  box-shadow: 0 10px 50px rgba(var(--tertiary-color-rgb), 0.25);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  /*margin-bottom: auto;*/
+
   
 }
+  .hero-sun-wrapper {
+  position: relative;
+  top: -50px; /* feltolja a napot a header után */
+  width: 150px;
+  height: 150px; /* opcionális, ha biztosítani akarjuk a wrapper méretét */
+  margin: 0 auto;
+  z-index: 50; 
+  margin-bottom: -50px; /* visszahúzza a napot a szöveg mögé */
+}
 
+.hero-sun-wrapper svg.hero-sun {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 50px rgba(var(--tertiary-color-rgb), 1));
+}
+ 
   .h-title {
-    color: var(--tertiary-color);
+    color: var(--brand-color);
     text-align: center;
     font-size: calc(var(--font-size-regular) * 2);
     line-height: calc(var(--line-height-regular) * 2);
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
-    margin-top: 5vh;
-  }
-
-  .h-images {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    gap: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 3.75rem;
     
   }
 
-    .h-images img {
-      min-width: 128px;
-      width:  32vw;
-      max-width: 267px;
-      height: auto;
-      filter: drop-shadow(0px clamp(5px, 1.2vw, 10px) clamp(5px, 1.2vw, 10px) rgba(var(--tertiary-color-rgb), 0.25)); 
-      position: relative;
-      z-index: 1;
-    }
-
-    
-
-
-      .img-center {
-        z-index: 3;
-        margin: 0 -25px;        /* közelebb húzás a többiekhez */
-      }
-      .img-left {
-        transform: rotate(-5deg);
-        margin-right: -25px;    /* átfedés */
-        z-index: 2; 
-      }
-
-      .img-right {
-        transform: rotate(5deg);
-        margin-left: -25px;     /* átfedés */
-        z-index: 2;
-      }
-
+  
 
     .h-content {
       margin-left: auto;
       margin-right: auto;
-      margin-top: 2rem;
-      color: var(--tertiary-color);
+      font-size: 1 rem;
+      color: var(--brand-color);
       text-align: center;
-      width: 52vw;
+      width: 100%;
+      margin-bottom: 2.5rem;
     }
       .h-name {
         font-size : calc(var(--font-size-regular) * 1.5);
@@ -1603,14 +1586,17 @@ header {
       }
 
     .h-more {
+      display: none;
       font-size: var(--font-size-medium);
       line-height: var(--line-height-medium);
       text-align: center;
       margin-top: auto;
-      font-weight: 500;
+      padding-top: 1rem;
+    
     }
 
 .down-arrow {
+  display: none;
   margin-top: .5rem;
   margin-bottom: auto;
   display: flex;
@@ -1618,6 +1604,7 @@ header {
 }
 
 .down-arrow svg {
+  display: none;
   width: 24px;
   height: 32px;
 }
@@ -1640,13 +1627,32 @@ header {
   
 }
 
+  .products-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: var(--brand-color);
+    margin-top: 3.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 77vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .product-card {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     width: 100%;
-    margin-top: 2rem;
+    max-width: 345px;
+    /*margin-top: 2rem;*/
     color: var(--brand-color);
+    border: 1px solid rgba(var(--primary-color-rgb), 0.5);
+    box-shadow: 4px 4px 10px rgba(var(--tertiary-color-rgb), 0.25);
+    padding: 2.5rem 1.5rem;
+    border-radius: 25px;
   }
 
     .product-header {
@@ -1659,13 +1665,14 @@ header {
     .p-name {
       font-family: 'Josefin Sans', sans-serif;
       font-size: var(--font-size-medium);
-      
+      text-align: center;
      
     }
 
     .p-type {
       color: var(--primary-color);
       font-size: calc(var(--font-size-regular) * 0.9);
+      text-align: center;
     }
 
     .p-image {
@@ -1680,16 +1687,48 @@ header {
       flex-flow: column nowrap;
       align-items: flex-end;
       gap: 1rem;
+      
     }
 
       .p-desc {
-        font-size: calc(var(--font-size-regular) * 0.9);
-        line-height: calc(var(--line-height-regular) * 0.9);
+        font-size: 1rem;
+        line-height: 1.2rem;
+        width: 64vw;
+        max-width: 256px;
       }
-
       .p-price {
         color: var(--primary-color);
-      }  
+        font-size: 1.25rem;
+      }
+      
+  .six-pack {
+    background-color: #ffffff; /* fallback */
+    background-color: rgba(var(--tertiary-color-rgb), 0.2);
+    box-shadow: 0 4px 10px rgba(var(--tertiary-color-rgb), 0.25);
+    width: 100vw;
+    padding: 11.7vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap:0;  
+    margin-bottom: 2rem;
+
+  }
+
+   .six-pack > h2 {
+    margin-top:auto
+   }
+  .six-pack > p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: var(--brand-color);
+    text-align: center;
+    max-width: 250px;
+    margin-bottom: auto;
+    
+
+  }
       
       
   
@@ -1710,79 +1749,81 @@ header {
 /*HERO SECTION*/
 
 @media (min-width: 1024px) {
+  .hero-sun-wrapper {
+    width: 260px;
+    height: 260px;
+    top: -80px; /* finomhangolás a nagyobb körhöz */
+  }
+
+  
   .h-title {
-    margin-top: 13vh;
+    /*margin-top: 13vh;*/
     margin-bottom: 0;
     font-size: 5rem;
+    line-height: 6rem;
   } 
   
-  .img-center {
-    margin: 0 -40px;        /* közelebb húzás a többiekhez */
-      }
-  .img-left {
-    margin-right: -40px;    /* átfedés */
-  }
-  .img-right {
-    margin-left: -40px;     /* átfedés */
-  }
+  
   .h-content {
-    margin-top: 4vh;
+    margin-top: 6vh;
+    font-size: 2.6rem;
+    line-height: 3.9rem;
+    max-width: 820px;
   }
-  .h-name {
-    font-size : 2.625rem;
-    line-height: 4rem;
-  }
+  
   .h-more {
+    display: none;
+    margin-top: 4vh;
     font-size: 2.18rem;
     font-weight: 400;
   }
   .down-arrow svg {
-  width: 48px;
-  height: 64px;
-}
+    display: none;
+    width: 48px;
+    height: 64px;
+  }
 }
 
 /*PRODUCTS SECTION*/
 @media (min-width: 1024px) {
+  .products-title {
+    font-size: 3.75rem;
+    line-height: 4.5rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
   .products {
+    flex-flow: row wrap;
+    align-items: stretch;
     gap: 5rem;
     margin-top: 7vh;
+    width: 100%;
     
   }
+  
   .product-card {
-    flex-direction: row;
-    width: 80vw;
-    max-width: 688px;
-  }
-  .products .product-card:nth-child(2) {
-  flex-direction: row-reverse;
-  
-  } 
-  
-  .p-name {
-    font-size: 2rem;
-    line-height: 2.5rem;
-}
-  .p-type {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-  .p-image {
-    margin-bottom: 2rem;
+    justify-content: flex-start;;
   }
   .product-info {
-   margin-top: 4rem; 
-   gap: 3rem;
-  }
-  
-  .p-desc {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    
+    flex-grow: 1;
   }
   .p-price {
-    font-size: 1.5rem;
+    margin-top: auto;
   }
+  .six-pack {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .six-pack > p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    max-width: 400px;
+  }
+  
+  
+  
   .CTA {
     font-size: 3.75rem;
     text-align: center;
