@@ -1653,6 +1653,7 @@ header {
     box-shadow: 4px 4px 10px rgba(var(--tertiary-color-rgb), 0.25);
     padding: 2.5rem 1.5rem;
     border-radius: 25px;
+    
   }
 
     .product-header {
@@ -1688,6 +1689,8 @@ header {
       align-items: flex-end;
       gap: 1rem;
       
+      
+      
     }
 
       .p-desc {
@@ -1695,6 +1698,9 @@ header {
         line-height: 1.2rem;
         width: 64vw;
         max-width: 256px;
+        
+        
+        
       }
       .p-price {
         color: var(--primary-color);
